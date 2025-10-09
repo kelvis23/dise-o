@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>H1/H2 con fuentes archivos OTF/TTF</title>
+<style>
+
+@font-face{
+  font-family:"Mi Sans";
+  src:url("/fonts/Inter-Regular.otf") format("opentype"),
+      url("/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+
+:root{
+  --font-h1:"Mi Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-h2:"Mi Serif", Georgia, "Times New Roman", serif;
+}
+
+body{ margin:16px; line-height:1.5; color:#222; font-family: var(--font-h1); }
+h1{ font-family: var(--font-h1); font-weight:700; font-size:32px; margin:0 0 8px; }
+h2{ font-family: var(--font-h2); font-weight:600; font-size:20px; margin:16px 0 8px; }
+</style>
+</head>
+<body>
+  <h1>H1 con “Mi Sans” (OTF/TTF)</h1>
+  <h2>H2 con “Mi Serif” (OTF/TTF)</h2>
+  <p>Ejemplo mínimo de carga de fuentes desde archivos OpenType (.otf) y TrueType (.ttf) con @font-face.</p>
+</body>
+</html>
