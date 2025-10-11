@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout con Header y Aside</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mi Sitio</h1>
+    <div class="search-box">
+      <select id="tipo">
+        <option value="peliculas">Películas</option>
+        <option value="series">Series</option>
+        <option value="documentales">Documentales</option>
+      </select>
+      <input type="text" placeholder="Buscar...">
+      <button>Buscar</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Películas</a></li>
+          <li><a href="#">Series</a></li>
+          <li><a href="#">Documentales</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h2>Contenido principal</h2>
+      <p>Aquí irán las películas, series o documentales...</p>
+    </main>
+  </div>
+
+</body>
+</html>
