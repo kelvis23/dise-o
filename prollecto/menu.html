@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout con Header y Aside</title>
   <link rel="stylesheet" href="menu.css">
 </head>
-<body>
 
+<body>
+  <!--cabesera -->
   <header>
     <h1>Mi Sitio</h1>
     <div class="search-box">
-          <a href="#">Películas</a>
-          <a href="#">Series</a>
-          <a href="#">Documentales</a>
+      <a href="#">Películas</a>
+      <a href="#">Series</a>
+      <a href="#">Documentales</a>
       <input type="text" placeholder="Buscar...">
       <button>Buscar</button>
     </div>
   </header>
-
+  <!--menu lateral-->
   <div class="container">
     <aside>
-         <details>
-    <summary>Seleccionar año</summary>
-    <div class="lista-anios">
-      <button>2025</button>
-      <button>2024</button>
-      <button>2023</button>
-      <button>2022</button>
-      <button>2021</button>
+      <details>
+        <summary>Seleccionar año</summary>
+           <div class="lista-anios lista-años">
+      <button data-anio="2025">2025</button>
+      <button data-anio="2024">2024</button>
+      <button data-anio="2023">2023</button>
+      <button data-anio="2022">2022</button>
+      <button data-anio="2021">2021</button>
     </div>
-  </details>
+      </details>
+      <details>
+        <summary>Géneros</summary>
+          <div class="lista-anios lista-generos">
+    <button data-genero="Acción">Acción</button>
+    <button data-genero="Comedia">Comedia</button>
+    <button data-genero="Drama">Drama</button>
+    <button data-genero="Terror">Terror</button>
+    <button data-genero="Documental">Documental</button>
+  </div>
+      </details>
     </aside>
 
     <main>
       <h2>Contenido principal</h2>
       <p>Aquí irán las películas, series o documentales...</p>
     </main>
-    <h1>se areglo</h1>
   </div>
 
+  <script>
+  // Selección múltiple para años
+  const yearButtons = document.querySelectorAll('.lista-años button');
+  yearButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('selected'); // alterna selección
+    });
+  });
+
+  // Selección múltiple para géneros
+  const generoButtons = document.querySelectorAll('.lista-generos button');
+  generoButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('selected'); // alterna selección
+    });
+  });
+</script>
+
+
 </body>
+
 </html>

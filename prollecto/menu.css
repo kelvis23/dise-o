@@ -79,15 +79,6 @@ aside {
   border-right: 2px solid #2a2a2a;
 }
 
-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-aside li {
-  margin: 15px 0;
-}
 
 aside a {
   color: white;
@@ -109,11 +100,10 @@ main {
 
 
     details {
-      width: 200px;
-      border: 1px solid #ccc;
+      width: 100%;
+      border: 1px solid #444;
       border-radius: 8px;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #222;
       padding: 10px;
     }
 
@@ -157,3 +147,35 @@ main {
     .lista-anios button:hover {
       background: #0056b3;
     }
+
+    .search-box a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.search-box a:hover {
+  color: #ff6d00;
+}
+
+
+
+.lista-anios button {
+  background: #ff6d00; /* mismo estilo que años */
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.lista-anios button:hover {
+  background: #ff3d00;
+}
+
+/* Clase para botones seleccionados */
+.lista-anios button.selected {
+  background: #00aaff; /* color diferente al seleccionar */
+}
