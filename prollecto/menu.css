@@ -104,3 +104,56 @@ aside a:hover {
 main {
   padding: 20px;
 }
+
+/*-- filtro --*/
+
+
+    details {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::marker {
+      display: none; /* quita el triángulo por defecto */
+    }
+
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+    }
+
+    summary::after {
+      content: "▼";
+      float: right;
+    }
+
+    .lista-anios {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .lista-anios button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .lista-anios button:hover {
+      background: #0056b3;
+    }
