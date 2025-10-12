@@ -25,49 +25,97 @@
     <aside>
       <details>
         <summary>Seleccionar año</summary>
-           <div class="lista-anios lista-años">
-      <button data-anio="2025">2025</button>
-      <button data-anio="2024">2024</button>
-      <button data-anio="2023">2023</button>
-      <button data-anio="2022">2022</button>
-      <button data-anio="2021">2021</button>
-    </div>
+        <div class="lista-anios lista-años">
+          <button data-anio="2025">2025</button>
+          <button data-anio="2024">2024</button>
+          <button data-anio="2023">2023</button>
+          <button data-anio="2022">2022</button>
+          <button data-anio="2021">2021</button>
+        </div>
       </details>
       <details>
         <summary>Géneros</summary>
-          <div class="lista-anios lista-generos">
-    <button data-genero="Acción">Acción</button>
-    <button data-genero="Comedia">Comedia</button>
-    <button data-genero="Drama">Drama</button>
-    <button data-genero="Terror">Terror</button>
-    <button data-genero="Documental">Documental</button>
-  </div>
+        <div class="lista-anios lista-generos">
+          <button data-genero="Acción">Acción</button>
+          <button data-genero="Comedia">Comedia</button>
+          <button data-genero="Drama">Drama</button>
+          <button data-genero="Terror">Terror</button>
+          <button data-genero="Documental">Documental</button>
+        </div>
       </details>
     </aside>
 
+
+     <!-- parte principal-->
     <main>
-      <h2>Contenido principal</h2>
-      <p>Aquí irán las películas, series o documentales...</p>
+        <!-- CAMBIO: Cada estantería ahora es <section> con clase estanteria -->
+  <section class="estanteria">
+    <h3>Continuar viendo</h3>
+    <!-- CAMBIO: Contenedor horizontal de películas -->
+    <div class="peliculas">
+      <!-- CAMBIO: Cada película ahora es <article> -->
+      <article class="pelicula">
+        <img src="pelicula1.jpg" alt="Película 1">
+        <h4>Título 1</h4>
+      </article>
+      <article class="pelicula">
+        <img src="pelicula2.jpg" alt="Película 2">
+        <h4>Título 2</h4>
+      </article>
+    </div>
+  </section>
+
+  <!-- CAMBIO: Otra estantería -->
+  <section class="estanteria">
+    <h3>Populares</h3>
+    <div class="peliculas">
+      <article class="pelicula">
+        <img src="pelicula3.jpg" alt="Película 3">
+        <h4>Título 3</h4>
+      </article>
+      <article class="pelicula">
+        <img src="pelicula4.jpg" alt="Película 4">
+        <h4>Título 4</h4>
+      </article>
+    </div>
+  </section>
+
     </main>
   </div>
 
   <script>
-  // Selección múltiple para años
-  const yearButtons = document.querySelectorAll('.lista-años button');
-  yearButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.toggle('selected'); // alterna selección
-    });
-  });
+    // Objetos para almacenar filtros seleccionados
+    const filtros = {
+      años: new Set(),
+      generos: new Set()
+    };
 
-  // Selección múltiple para géneros
-  const generoButtons = document.querySelectorAll('.lista-generos button');
-  generoButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.toggle('selected'); // alterna selección
+    // Función para manejar la selección de botones
+    function toggleFilter(button, tipo, valor) {
+      button.classList.toggle('selected');
+
+      if (filtros[tipo].has(valor)) {
+        filtros[tipo].delete(valor);
+      } else {
+        filtros[tipo].add(valor);
+      }
+    }
+    // Selección múltiple para años
+    const yearButtons = document.querySelectorAll('.lista-años button');
+    yearButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('selected'); // alterna selección
+      });
     });
-  });
-</script>
+
+    // Selección múltiple para géneros
+    const generoButtons = document.querySelectorAll('.lista-generos button');
+    generoButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('selected'); // alterna selección
+      });
+    });
+  </script>
 
 
 </body>

@@ -179,3 +179,61 @@ main {
 .lista-anios button.selected {
   background: #00aaff; /* color diferente al seleccionar */
 }
+
+
+
+
+/* --- Contenedor horizontal de películas --- */
+
+/* Estantería */
+.estanteria {
+  border: 2px solid #ff6d00; /* borde visible */
+  border-radius: 10px;       /* esquinas redondeadas */
+  padding: 15px;
+  margin: 20px 0;            /* espacio entre estanterías */
+  background-color: #1e1e1e; /* fondo oscuro */
+}
+
+/* Título de estantería */
+
+/* CAMBIO: Estilo de la estantería */
+.estanteria {
+  border: 2px solid #ff6d00; /* borde visible */
+  border-radius: 10px;       /* esquinas redondeadas */
+  padding: 15px;
+  margin: 20px 0;            /* espacio entre estanterías */
+  background-color: #1e1e1e; /* fondo oscuro */
+}
+
+/* CAMBIO: Título de estantería */
+.estanteria h3 {
+  margin-top: 0;
+  color: #ff6d00;
+}
+
+/* CAMBIO: Contenedor horizontal de películas con scroll */
+.peliculas {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto; /* scroll horizontal si hay muchas películas */
+  padding-top: 10px;
+}
+
+/* CAMBIO: Cada película ahora flex item */
+.pelicula {
+  flex: 0 0 auto; /* evita que se estire */
+  width: 150px;
+  text-align: center;
+}
+
+.pelicula img {
+  width: 100%;
+  border-radius: 5px; /* CAMBIO: esquinas redondeadas */
+  display: block;     /* CAMBIO: asegura que no haya espacio abajo */
+}
+
+.pelicula h4 {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: white;
+}
