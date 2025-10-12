@@ -198,7 +198,7 @@ main {
 
 /* CAMBIO: Estilo de la estantería */
 .estanteria {
-  border: 2px solid #ff6d00; /* borde visible */
+  border: 2px solid #ff6d00  ; /* borde visible */
   border-radius: 10px;       /* esquinas redondeadas */
   padding: 15px;
   margin: 20px 0;            /* espacio entre estanterías */
@@ -208,7 +208,7 @@ main {
 /* CAMBIO: Título de estantería */
 .estanteria h3 {
   margin-top: 0;
-  color: #ff6d00;
+  color:#dcdcdc;
 }
 
 /* CAMBIO: Contenedor horizontal de películas con scroll */
@@ -224,14 +224,20 @@ main {
   flex: 0 0 auto; /* evita que se estire */
   width: 150px;
   text-align: center;
+    border: 2px solid #ff6d00;  /* borde individual */
+  border-radius: 10px;         /* esquinas redondeadas */
+  padding: 10px;               /* espacio interno */
+  background-color: #1e1e1e;   /* fondo oscuro */
 }
 
+/* Imagen dentro de cada película */
 .pelicula img {
   width: 100%;
   border-radius: 5px; /* CAMBIO: esquinas redondeadas */
   display: block;     /* CAMBIO: asegura que no haya espacio abajo */
 }
 
+/* Título de la película */
 .pelicula h4 {
   font-size: 0.9rem;
   margin-top: 5px;
