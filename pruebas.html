@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista desplegable de años sin JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+    }
+
+    details {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      list-style: none;
+    }
+
+    summary::marker {
+      display: none; /* quita el triángulo por defecto */
+    }
+
+    details[open] summary::after {
+      content: "▲";
+      float: right;
+    }
+
+    summary::after {
+      content: "▼";
+      float: right;
+    }
+
+    .lista-anios {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .lista-anios button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .lista-anios button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📅 Selecciona un año</h2>
+
+  <details>
+    <summary>Seleccionar año</summary>
+    <div class="lista-anios">
+      <button>2025</button>
+      <button>2024</button>
+      <button>2023</button>
+      <button>2022</button>
+      <button>2021</button>
+    </div>
+  </details>
+
+</body>
+</html>
