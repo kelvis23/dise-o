@@ -11,11 +11,9 @@
   <header>
     <h1>Mi Sitio</h1>
     <div class="search-box">
-      <select id="tipo">
-        <option value="peliculas">Películas</option>
-        <option value="series">Series</option>
-        <option value="documentales">Documentales</option>
-      </select>
+          <a href="#">Películas</a>
+          <a href="#">Series</a>
+          <a href="#">Documentales</a>
       <input type="text" placeholder="Buscar...">
       <button>Buscar</button>
     </div>
@@ -23,14 +21,32 @@
 
   <div class="container">
     <aside>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Películas</a></li>
-          <li><a href="#">Series</a></li>
-          <li><a href="#">Documentales</a></li>
-        </ul>
-      </nav>
+           <h3>Filtros</h3>
+      <div class="filtro">
+        <label for="anio">Año:</label>
+        <select id="anio">
+          <option value="">Todos</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2020-2022">2020–2022</option>
+          <option value="antes-2020">Antes de 2020</option>
+        </select>
+      </div>
+
+      <div class="filtro">
+        <label for="genero">Género:</label>
+        <select id="genero">
+          <option value="">Todos</option>
+          <option value="accion">Acción</option>
+          <option value="comedia">Comedia</option>
+          <option value="drama">Drama</option>
+          <option value="terror">Terror</option>
+          <option value="documental">Documental</option>
+        </select>
+      </div>
+
+      <button class="btn-filtrar">Aplicar filtros</button>
     </aside>
 
     <main>
