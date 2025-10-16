@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            width: 80%;
+            /* Hace que la tabla ocupe el 80% del ancho del contenedor */
+            border-collapse: collapse;
+            /* Para que los bordes no tengan espacio entre ellos */
+            font-size: 24px
+        }
+
+        table,
+        .table th,
+        .table td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1d">
+        <tr>
+            <td>a</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>c</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+
+            <td>d</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>e</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>f</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <table class="table">
+        <tr>
+            <td colspan="2" rowspan="4">a</td>
+            <td colspan="2">2</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">b</td>
+        </tr>
+        <tr>
+            <!-- Aquí no hace falta celda porque el rowspan cubre estas filas -->
+        </tr>
+        <tr>
+            <td colspan="2">d</td>
+            <td colspan="2">2</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="3">e</td>
+            <td colspan="2" rowspan="3">2</td>
+
+        </tr>
+        <tr>
+
+            <!-- Aquí no hace falta celda porque el rowspan cubre estas filas -->
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+</body>
+
+</html>
