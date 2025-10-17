@@ -6,105 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+     
+#parent {
+    display: grid;
+    
+    
+    gap: 8px;
+}
+    
+.div1 {
+    
+    background-color: rgb(99, 99, 99);
+    white: 150px;
+    height: 165px;
+     grid-column: 1;       /* columna 1 */
+    grid-row: 1 / span 2;  /* filas 1 y 2, ocupa dos filas */
 
+    
+    
+}
 
-        td {
-            border: 2px solid #444;
-        }
+.div2 {
+   background-color: rgb(99, 99, 99);
+    white-space: 50px;
+    height: 50px;
+    grid-column: 2; /* div2 en la columna 2 */
+    grid-row: 1; /* fila 1 */
+    
+}
 
-        td {
-            padding: 12px 15px;
-            background-color: #f9f9f9;
-            transition: background-color 0.3s ease;
-        }
+.div3 {
+    background-color: rgb(99, 99, 99);
+    white: 100px;
+    height: 100px;
+     grid-column: 2; /* misma columna que div2 */
+    grid-row: 2; /* fila debajo de div2 */
+}
+
+.div4 {
+   background-color: rgb(99, 99, 99);
+    white: 50px;
+    height: 50px;
+    grid-column: 1;       /* columna 1 */
+    grid-row: 3;   /* fila debajo de div1 */
+}
+
+.div5 {
+   background-color: rgb(99, 99, 99);
+    white: 50px;
+    height: 50px;
+     grid-column: 2;  /* columna 2 */
+    grid-row: 3;   /* fila debajo de div3 */
+}
+
+.div6 {
+    background-color: rgb(99, 99, 99);
+    white: 100px;
+    height: 100px;
+     grid-column: 1; /* columna 1 */
+    grid-row: 4;  /* fila debajo de div4 */
+    
+}
+
+.div7 {
+   background-color: rgb(99, 99, 99);
+    white: 100px;
+    height: 100px;
+     grid-column: 2;  /* columna 2 */
+    grid-row: 4;  /* fila debajo de div5 */
+}
+        
     </style>
 </head>
-
 <body>
-    <table border="1d">
-        <tr>
-            <td>a</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-
-        </tr>
-        <tr>
-            <td>b</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>c</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-
-            <td>d</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>e</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>f</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>g</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-
-    </table>
-    <br>
-
-    <table >
-        <tr>
-            <td rowspan= 3 colspan=2>a</td>
-            <td colspan = 2>2</td>
-             <td>4</td>
-        </tr>
-        <tr>
-            <td rowspan =2 colspan= 2>b</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>8</td>
-        </tr>
-        <tr>
-
-            <td colspan="2">d</td>
-            <td colspan="2">2</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td rowspan="2" colspan="2">e</td>
-            <td rowspan="2" colspan="2">2</td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>s</td>
-        </tr>
-    </table>
+  
+<div id="parent">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+</div>
+    
+<div id="parent">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+</div>
 </body>
 
 </html>
