@@ -16,7 +16,7 @@
             background-color: rgb(99, 99, 99);
             white: 100px;
             height: 100px;
-            grid-column: 1 ;
+            grid-column: 1 /span 3 ;
             /* columna 1  */
             grid-row: 1  ;
             /* filas 1 ,2 y 3  */
@@ -25,44 +25,35 @@
 
         .div2 {
             background-color: rgb(99, 99, 99);
-            white: 100px;
-            height: 100px;
-            grid-column: 2 /span 2;
+            white: 200px;
+            height: 200px;
+            grid-column: 1 ;
             /*  columna 1 */
-            grid-row: 1 ;
+            grid-row: 2/span 2 ;
             /* fila    */
         }
     
         .div3 {
             background-color: rgb(99, 99, 99);
-            white: 200px;
-            height: 200px;
-            grid-column: 1 ;
+            white: 100px;
+            height: 100px;
+            grid-column: 1 /span 2;
             /* columna 2 */
-            grid-row: 3 /span 2;
+            grid-row: 5 ;
             /* fila 2 */
         }
 
         .div4 {
             background-color: rgb(99, 99, 99);
-            white: 300px;
-            height: 309px;
+            white: 200px;
+            height: 200px;
             grid-column: 2;
             /* columna 2 */
-            grid-row: 2/span 3;
+            grid-row: 2/span 2;
             /* fila debajo de div3 */
         }
 
-         .div5 {
-            background-color: rgb(99, 99, 99);
-            white:  100px;
-            height: 100px;
-            grid-column: 3;
-            /* columna 1 */
-            grid-row: 2 ;
-            /* fila debajo de div5 y 2 fila  */
-
-        }
+       
     </style>
 </head>
 
@@ -73,7 +64,7 @@
         <div class="div2"></div>
         <div class="div3"></div>
         <div class="div4"></div>
-        <div class="div5"></div>
+
     </div>
 
 </body>
