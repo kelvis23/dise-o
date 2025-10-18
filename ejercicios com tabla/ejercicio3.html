@@ -8,14 +8,14 @@
     <style>
         #parent {
             display: grid;
-
-
+            grid-template-columns: 150px 150px 150px;;
+        
             gap: 8px;
         }
 
         .div1 {
 
-            background-color: rgb(99, 99, 99);
+            background-color: rgb(99, 99, 99); /* cada columna tiene un ancho fijo */
             white: 100px;
             height: 100px;
             grid-column: 1;
@@ -26,7 +26,7 @@
 
         .div2 {
             background-color: rgb(99, 99, 99);
-            white-space: 100px;
+          
             height: 100px;
             grid-column: 2 /span 2;
             /* div2 en la columna 2 Y 3*/

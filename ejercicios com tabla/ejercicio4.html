@@ -8,6 +8,8 @@
     <style>
         #parent {
             display: grid;
+            grid-template-columns: 150px 150px  150px 150px; /* cada columna tiene un ancho fijo */
+           
             gap: 8px;
         }
 
@@ -49,7 +51,7 @@
             height: 300px;
             grid-column: 4;
             /* columna 2 */
-            grid-row: 2span 3;
+            grid-row: 2 /span 3;
             /* fila debajo de div2 */
         }
 
@@ -74,7 +76,7 @@
         <div class="div3"></div>
         <div class="div4"></div>
         <div class="div5"></div>
-        <div class="div6"></div>
+
     </div>
 
 </body>
