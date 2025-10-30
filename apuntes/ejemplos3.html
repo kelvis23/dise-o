@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            background: orange;
+            top: -1px;
+            left: -1px;
+            position: relative;
+            z-index: 100;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            top: -20px;
+            left: -10px;
+             z-index: 10;
+        }
+        .contenedor{
+            width: 100px;
+            height: 100px;
+            background: rgb(41, 145, 194);
+            position: relative;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+         <div  class="div2"></div>
+    </div>
+
+     <div class="contenedor">
+         <div  class=""></div>
+    </div>
+   
+</body>
+</html>

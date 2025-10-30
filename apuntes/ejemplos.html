@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            background-color: red;
+            width: 180px;
+            height: 79px;
+        }
+
+        .div2 {
+            background-color: red;
+            width: 50%;
+            height: 76px;
+        }
+
+        .div3 {
+            background-color: red;
+            width: 50vw;
+            height: 79px;
+        }
+
+        .p1 {
+            width: 50%;
+            background-color: green;
+        }
+
+        .p2 {
+            width: 40vw;
+            background-color: green;
+        }
+
+        /* ejercicio */
+        .box {
+            box-sizing: border-box;
+        }
+
+        .caja1 {
+            background-color: blue;
+            padding: 20px;
+            width: 70%;
+            float: left;
+        }
+
+        .caja2 {
+            background-color: yellow;
+            padding: 20px;
+            width: 30%;
+            float: right;
+        }
+
+
+        /* ejercicio 2 */
+        .box1 {
+            background: blue;
+            width: 250px;
+            height: 250px;
+            border: 10px solid red;
+            padding: 10px;
+
+        }
+
+        .box2 {
+            background: blue;
+            width: 250px;
+            height: 250px;
+            border: 10px solid red;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /*ejercicio 3*/
+        :root {
+            --text-color: #333;
+        }
+
+        .panel {
+            display: inline-block;
+            width: 320px;
+            padding: 1em;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+            font-family: Verdana, sans-serif;
+        }
+
+        .inverted {
+
+            border-width: 0px;
+            background-color: #111;
+            --text-color: #eee;
+        }
+
+        .panel>h2,
+        .panel>p {
+            margin: opx;
+            color: var(--text-color);
+        }
+        /*ejercicio 4*/
+        .card{
+            background-color: rgb(150, 107, 231);
+            height: 400px;
+            width: 200px;
+            overflow: hidden;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: 1px solid white;
+            box-shadow: 0px 1px 5px 0px red;
+            text-align: center;
+        }
+          /*ejercicio 5*/
+          .bo1{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            display: inline-block ;
+            margin: auto;
+            outline: 10px solid yellow;
+          }
+    </style>
+</head>
+
+<body>
+    <p>parafo1</p>
+    <div class="div1">
+        <p>parafo2</p>
+    </div>
+    <div class="div2">
+        <p class="p1">parafo3</p>
+    </div>
+    <div class="div3">
+        <p class="p2">parafo4</p>
+    </div>
+    <p>parafo5</p>
+
+    <h2>ejersisico</h2>
+    <div class="caja1 box"> </div>
+    <div class="caja2 box"></div>
+
+
+    <h2>ejersisico2</h2>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <h2>ejersisico3</h2>
+    <div class="panel" ;>
+        <h2>panel normal</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="panel inverted">
+        <h2>panel normal</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+
+    <h2>ejersisico4</h2>
+    <div class="card">
+        <div class="card-top"></div>
+        <img src="image.png">
+        <div class="card-body">
+        <h2>Lorem ipsum </h2> 
+        <p>dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+    </div>
+
+        <h2>ejersisico5</h2>
+        <div class="bo1" ></div><div class="bo1"></div><div class="bo1"></div>
+</body>
+
+</html>

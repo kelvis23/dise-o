@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 30;
+        }
+        .texto-f1 {
+            margin-top: 50px;
+            margin: auto;
+            background-color: lightgreen;
+            border: 5px solid blue;
+
+        }
+
+        .texto-f1::first-line {
+            color: red;
+            font-size: 100px;
+        }
+
+        .texto-f2 {
+            margin-top: 50px;
+            margin: auto;
+            background-color: lightgreen;
+            border: 5px solid blue;
+
+        }
+
+        .texto-f2::first-letter {
+            color: red;
+            font-size: 100px;
+        }
+        b{
+            margin-top: 50px;
+            margin: auto;
+            background-color: lightgreen;
+        }
+        b::before{
+            content: "buenos dias";
+            color: red;
+        }
+        b::after{
+            content: "tu cuenta esta hablitada";
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="texto-f1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis commodi doloribus
+            exercitationemeveniet harum beatae totam eligendi et. Dolores, possimus labore dolorum
+            adipisci veniam ullamvoluptates quidem molestias ratione vero?</div>
+        <br>
+            <div class=texto-f2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis commodi doloribus
+            exercitationemeveniet harum beatae totam eligendi et. Dolores, possimus labore dolorum
+            adipisci veniam ullamvoluptates quidem molestias ratione vero?
+        </div>
+    </div>
+<br><br>
+    <b>kelvis</b>
+</body>
+
+</html>
