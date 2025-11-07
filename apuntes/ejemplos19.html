@@ -7,48 +7,57 @@
     <title>Document</title>
 
     <style>
-        div {
-            width: 45%;
-            display: inline-block;
-            padding: 20px;
+        .container {
+            background: blue;
+            padding: 20px 5px;
         }
 
-
-        .caja1 {
-            background: gray;
-
+        .caja {
+            background: yellow;
+            height: 100px;
+            width: 100px;
+            transition-property: all;
+            transition-duration: 1s, 2s;
+            margin: 40px;
+            border: 2px solid white;
+            position: relative;
+            left: 0%
         }
 
-        .caja2 {
-            background: rgb(119, 116, 116);
+        
 
+        .container:hover > .caja {
+            background-color: orange;
+            left: 80%;
+            border: 5px solid rgb(158, 248, 85);
+            margin: 100px;
         }
 
-        /* esto es para el responsi */
-        @media only screen and (max-width: 800px) {
-            div {
-                display: block;
-                width: 100%;
-            }
+        .caja:first-child {
+            transition-timing-function: linear;
+        }
+        .caja:nth-child(2) {
+            transition-timing-function: ease;
+        }
+        .caja:nth-child(3) {
+            transition-timing-function: ease-in;
+        }
+        .caja:nth-child(4) {
+            transition-timing-function: ease-out;
+        }
+        .caja:nth-child(5) {
+            transition-timing-function: ease-in-out;
         }
     </style>
 </head>
 
 <body>
-    <div class="caja1">
-        <h1>Titulo parrafo</h1>
-        <p>
-            Un párrafo, también llamado parágrafo o acápite, es una unidad comunicativa del
-            lenguaje escrito compuesta por un conjunto de oraciones que tienen cierta unidad temática o que,
-            sin tenerla, se enuncian juntas. Es un componente del texto que en su aspecto externo termina
-        </p>
-    </div>
-    <div class="caja2">
-        <h2>titulo parafo2</h2>
-        <p>
-            Fragmento de un texto en prosa constituido por un conjunto de líneas seguidas
-            y caracterizado por el punto y aparte al final de la última.
-        </p>
+    <div class="container">
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
     </div>
 
 </body>

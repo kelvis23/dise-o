@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script src="https://kit.fontawesome.com/697908d42a.js" crossorigin="anonymous"></script>
+    <style>
+        div{
+            background:  blue;
+        }
+        .nav{
+            background: rgb(80, 80, 231);
+            height: auto;
+            margin: auto;
+        }
+
+        .nav_ul{
+             list-style-type: none;
+             padding-left: 0; 
+        }
+        .nav_li{
+            color: white;
+            width: 100px;
+        }
+         /* esto es para el responsi */
+        @media only screen and (max-width: 800px) {
+            div {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div >
+        <nav class="nav">
+            <ul class="nav_ul">
+                <li class="nav_li"> <i class="fas fa-house-user"></i><a href="#">Inicio</a></li>
+                <li class="nav_li"> <i class="fas fa-users"></i> <a href="#">Nosotros</a></li>
+                <li class="nav_li"> <i class="fas fa-concierge-bell"></i><a href="#">Servicios</a></li>
+
+                <li class="nav_li"> <i class="fas fa-file-signature"> <a href="#">Contacto</a></i></li>
+            </ul>
+        </div>
+   
+    </div>
+
+</body>
+
+</html>
+
