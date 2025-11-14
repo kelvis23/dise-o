@@ -7,45 +7,32 @@
     <title>Document</title>
        <script src="https://kit.fontawesome.com/697908d42a.js" crossorigin="anonymous"></script>
     <style>
-        div{
-            background:  blue;
+        *{
+            padding: 0;
+            margin: 0;
         }
-        .nav{
-            background: rgb(80, 80, 231);
-            height: auto;
-            margin: auto;
+         .flex-container{
+            display: flex;
+        }
+        .flex-item{
+            background: rgb(64, 64, 255);
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
         }
 
-        .nav_ul{
-             list-style-type: none;
-             padding-left: 0; 
-        }
-        .nav_li{
-            color: white;
-            width: 100px;
-        }
-         /* esto es para el responsi */
-        @media only screen and (max-width: 800px) {
-            div {
-                display: block;
-                width: 100%;
-            }
-        }
+
     </style>
 </head>
 
 <body>
-    <div >
-        <nav class="nav">
-            <ul class="nav_ul">
-                <li class="nav_li"> <i class="fas fa-house-user"></i><a href="#">Inicio</a></li>
-                <li class="nav_li"> <i class="fas fa-users"></i> <a href="#">Nosotros</a></li>
-                <li class="nav_li"> <i class="fas fa-concierge-bell"></i><a href="#">Servicios</a></li>
-
-                <li class="nav_li"> <i class="fas fa-file-signature"> <a href="#">Contacto</a></i></li>
-            </ul>
-        </div>
-   
+    <div class="flex-container">
+    <div  class="flex-item">
+        <p>Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario </p>
+    </div>
+    <div  class="flex-item">
+        <p>Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles generados por un algoritmo de cifrado que, aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario </p>
+    </div>
     </div>
 
 </body>
