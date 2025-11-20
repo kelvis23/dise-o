@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      
-  .caja{
-    margin: 25px;
-    width:  300px;
-    height: 500px;
-    border-radius: 5px;
+    <!DOCTYPE html>
+    <html lang="en">
 
-  }
-  .caja img{
-    height: 100%;
-    width: 100%;
-    border: 5px solid blue;
-    object-fit: cover;
-  }
-    </style>
-</head>
-<div class="caja">
-    <img src="https://thecardcollective.dk/cdn/shop/products/1c808725-817d-515e-a7e2-ff4a53bfe363_800x.jpg?v=1655128181" alt="logo de la pagina">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                /* Hacer que el cuerpo ocupe toda la altura de la ventana */
+                display: flex;
+                justify-content: center;
+                /* Centrar las cajas horizontalmente */
+                align-items: center;
+                /* Centrar las cajas verticalmente */
 
-</div>
+            }
+
+
+            .div {
+                border: 12px solid blue;
+                width: 350px;
+                padding: 10px;
+                /* Transiciones para border, width y height */
+                transition: border 2s, width 3s, height 1s;
+            }
+
+            .div:hover {
+                border-color: red;
+                width: 450px;
+                height: 500px;
+
+            }
+
+             /* Aquí aplicamos object-fit */
+        .div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cambia a none, contain o scale-down según necesites */
+        }
+          
+        </style>
+    </head>
+
+<body>
+
+    <div class="div">
+
+        <img class="img"
+            src="https://thecardcollective.dk/cdn/shop/products/1c808725-817d-515e-a7e2-ff4a53bfe363_800x.jpg?v=1655128181"
+            alt="logo de la pagina">
+    </div>
 </body>
+
 </html>

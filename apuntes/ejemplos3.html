@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background: orange;
+            top: 40px;
+            left: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+            top: -20px;
+            left: -10px;
+            z-index: 100;
+        }
+
+        /* esto es de la otra forma */
+        /*
+        El z-index en CSS sirve para controlar la profundidad (el orden en el eje z) de los elementos que se superponen en una página web. En otras palabras, determina qué elemento se muestra encima de otro cuando hay solapamiento.
+
+        🔹 ¿Cómo funciona?
+
+         Solo afecta a elementos que tienen un valor de position distinto a static (por ejemplo: relative, absolute, fixed, sticky).
+
+         Un número mayor de z-index coloca el elemento más arriba (más visible).
+
+          Un número menor lo coloca más atrás.
+        */
+        /*
         .div1{
             width: 200px;
             height: 200px;
@@ -23,25 +57,18 @@
             left: -10px;
              z-index: 10;
         }
-        .contenedor{
-            width: 100px;
-            height: 100px;
-            background: rgb(41, 145, 194);
-            position: relative;
-            top: 0px;
-            left: 0px;
-            z-index: 10;
-        }
+
+        */
     </style>
 </head>
+
 <body>
-    <div class="div1">
-         <div  class="div2"></div>
+    <div class="div2">
+        <div class="div1"></div>
     </div>
 
-     <div class="contenedor">
-         <div  class=""></div>
-    </div>
-   
+
+
 </body>
+
 </html>

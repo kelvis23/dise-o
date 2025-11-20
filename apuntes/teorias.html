@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!---->
+    <!--
+    
+position: relative
+
+El elemento se queda en su posición normal, PERO puedes moverlo con top, left, etc.
+
+Al moverse, su espacio original se mantiene, como si no se hubiera movido.
+
+También sirve como referencia para elementos absolute dentro de él.
+
+📌 Úsalo cuando necesitas mover un elemento un poco, o cuando quieres que sea el contenedor de un absolute.
+
+.elemento {
+  position: relative;
+  top: 10px; /* baja 10px */
+  left: 20px; /* avanza 20px a la derecha */
+}
+
+3️⃣ position: absolute
+
+Sale del flujo (como si flotara encima).
+
+Se posiciona respecto al primer ancestro que NO sea static (relative/absolute/fixed/sticky).
+
+Si no hay ninguno, se posiciona respecto a toda la página.
+
+📌 Úsalo cuando necesitas colocar un elemento con precisión dentro de un contenedor.
+
+.padre {
+  position: relative; /* referencia */
+}
+
+.hijo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+4️⃣ position: fixed
+
+También sale del flujo.
+
+Se pega a la ventana del navegador.
+
+No se mueve aunque hagas scroll.
+
+📌 Muy útil para:
+
+menús fijos arriba,
+
+botones flotantes,
+
+barras laterales.
+
+.boton-fijo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+5️⃣ position: sticky
+
+Funciona como relative, hasta que el usuario hace scroll.
+
+Cuando llega a un límite (top, bottom...), se vuelve fixed.
+
+📌 Sirve para:
+
+cabeceras pegajosas,
+
+títulos de sección que se quedan arriba.
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+
+
+
+  El z-index en CSS sirve para controlar la profundidad (el orden en el eje z) de los elementos que se superponen en una página web. En otras palabras, determina qué elemento se muestra encima de otro cuando hay solapamiento.
+
+        🔹 ¿Cómo funciona?
+
+         Solo afecta a elementos que tienen un valor de position distinto a static (por ejemplo: relative, absolute, fixed, sticky).
+
+         Un número mayor de z-index coloca el elemento más arriba (más visible).
+
+          Un número menor lo coloca más atrás.
+ 
+
+
+
+
+ overflow: hidden
+
+El contenido que se salga se corta y no se ve
+ 
+ 
+ 
+overflow: scroll
+
+Siempre muestra barras de desplazamiento, aunque no hagan falta.
+ 
+ 
+ 
+ overflow: auto
+
+Muestra barras de scroll solo si hacen falta.
+ 
+ 
+overflow: clip
+
+Corta el contenido como hidden, pero no permite desplazamiento y es más estricto.
+
+
+
+
+Propiedades de object-fit
+
+none
+
+La imagen se muestra en su tamaño original, sin escalar ni recortar.
+
+Si la imagen es más grande que la caja, puede desbordarla.
+
+
+contain
+
+La imagen se ajusta completamente dentro de la caja, manteniendo la proporción.
+
+Puede dejar “espacios vacíos” si la proporción de la imagen no coincide con la caja.
+
+Se centra automáticamente en la caj
+
+cover
+
+La imagen llena completamente la caja, manteniendo su proporción.
+
+Puede recortar partes de la imagen si la proporción no coincide.
+ 
+
+
+scale-down
+
+La imagen se ajusta al tamaño más pequeño posible entre none y contain.
+
+Si la imagen es más pequeña que la caja, se mantiene sin escalar.
+
+
+
+
+
+-->
+</body>
+
+</html>
