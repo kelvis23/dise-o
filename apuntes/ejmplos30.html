@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+}
+.flex-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+   background-color: pink;
+   margin: 50px auto;
+   padding: 30 px;
+   border-radius: 25px;
+   max-width: 1000px;
+
+}
+
+.form{
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.form_imput{
+    width: 100%;
+    padding: 40px;
+    margin: 10px ,0;
+    border: none;
+    border-bottom: 3px solid white;
+    background: purple;
+    color: white;
+}
+
+.form_imput:focus{
+    background:  linear-gradient(to bottom, trasparent,blue);
+    outline: none;
+    border-bottom:3px solid pink ;
+}
+
+.form textarea{
+    min-height: 150px;
+    resize: none;
+    
+}
+.grid-itm:nth-child(4){
+    background-color: yellow;
+  
+}
+</style>
+<body>
+    <div class="flex-container">
+        <form class="form-inscrip">
+    <div class="form_section">
+        <input type="submit"class=form_imput>
+    </div>
+    <div class="form_section">
+        <input type="submit"class=form_imput>
+
+    </div>
+    <div class="form_section">
+        <input type="submit"class=form_imput>
+
+    </div>
+    <div class="form_section">
+        <input type="submit"class=form_imput>
+
+    </div>
+    <div class="form_section">
+        <input type="submit"class=form_imput>
+
+    </div>
+    </form>
+    </div>
+ 
+</body>
+</html>
