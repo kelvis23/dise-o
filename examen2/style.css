@@ -1,0 +1,76 @@
+    body {
+        object-fit: contain;
+        background-image: url("background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        /* Centrar las cajas horizontalmente */
+
+
+    }
+
+
+    .menu-fixe {
+        background-color: rgb(223, 221, 221);
+        
+        font-size: 30px;
+        position: fixed;
+
+
+    }
+
+    .caja1 {
+        background: linear-gradient(to left, rgb(0, 128, 30), rgba(13, 112, 226, 0.802));
+        position: fixed;
+        top: 150px;
+        left: 100px;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .caja1-sub {
+        height: 50;
+        margin: 40px;
+        padding: 20px;
+        border-radius: 10px;
+        background: white;
+    }
+
+    .flex-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        top: 500px;
+        left: -300px;
+    }
+
+    .flex-item {
+        border-radius: 10px;
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        height: 150px;
+        min-width: 100px;
+        /*esto es obligatorio para utilisalar flex 1 */
+        flex: 1
+    }
+
+    .footer {
+        position: fixed;
+        background-color: black;
+        top: 700px;
+        
+    }
+
+
+
+    /* esto es para el responsi */
+    @media only screen and (max-width: 800px) {
+        div {
+            display: block;
+            width: 100%;
+        }
+    }

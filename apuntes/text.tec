@@ -1,0 +1,177 @@
+El justify-content hace que si usamos:
+            - end : te lleva los div a la derecha  haciendo scroll hacia la izquierda
+            -start; a la izquierda haciendo scroll hacia la derecha
+            -center: te los mantienen ene el centro haciendo scroll hacia los dos lado
+
+
+Gradientes:
+
+    - background: linear-gradient(red 45%, blue 60% );
+    - background: linear-gradient(red 75%, blue );
+    - background: linear-gradient(to left, pink, blue, yellow, green);
+    - background: linear-gradient(to left top, pink, blue, yellow, green);
+    - background: radial-gradient( pink, blue, yellow, green);
+    - background: radial-gradient( yellow 80%, green);
+    - background: radial-gradient( yellow 50px, green);
+    - background: repeating-radial-gradient(red, blue 20%);
+    - background: repeating-radial-gradient(circle at 90%, red, red 10px, green 10px, green 20px );
+    - background: linear-gradient(to right, red, orange 30%, yellow 50%, green 70%, blue)
+    - background: linear-gradient(to right, red 20%, orange 20% 40%,yellow 40% 60%, green 60% 80%, blue 80%);
+
+        farthest-corner : Se extiende hasta la esquina más lejana.
+        farthest-side: Se extiende hasta el borde más lejano (horizontal o vertical).
+        closest-side: Se extiende hasta el borde más cercano (horizontal o vertical).
+        closest-corner: Se extiende hasta la esquina más cercana.
+
+
+
+
+Transiciones:
+
+   esto va en la caja general que afecta a todas{
+    transition-property:all ;
+    transition-duration: 1s, 2s;
+   }
+
+    - transition-timing-function: linear;
+    - transition-timing-function: ease;
+    - transition-timing-function: ease-in;
+    - transition-timing-function: ease-out;
+    - transition-timing-function: ease-in-out;
+   
+
+Cursores:
+    
+    - cursor:copy;
+    - cursor:crosshair;
+    - cursor:move
+    - cursor:wait;
+    - cursor:alias;
+    - cursor:zoom-in;
+    - cursor:no-drop;
+    - cursor:grab;
+    - cursor: help;
+
+Imagenes:
+    - object-fit:
+        - none -> introduce la imagen sin aplicar ninguna variacion a la imagen
+        - contain -> adapta a la caja conteniendola, tomando el centro como base
+        - cover -> ajusta la caja a su mejor proporcion
+        - scale-down-> busca el ancho o alto más pequeño para adaptarlo
+
+    - object-position: nos permite mover la imagen dentro de la caja (habilita top, left, right, top, bottom)
+        object-position:top left right button tb em
+
+
+buttons:
+
+    button:hover {}
+    button:focus {} 
+    button:active {}
+    button:visited {}
+
+
+Background:
+    background-image ->establecer la imagen de fondo
+    background-repeat -> repetir la imagen de fondo
+    background-attachment -> si la imagen de fondo se mueve o se queda fija al hacer scroll
+    background-size -> redimensionar imagenes de fondo. Values: x-size , y-size | x-size % auto
+    background-origin ->especifica el area de origen de un fondo o imagen en determinada caja  Values: content-box|padding-box|border-box
+    background-clip -> especifica si el fondo de un elemento, ya sea color o imagen se extiende por debajo de su borde   Values: content-box|padding-box|
+    background-position -> controla la posición en la que se muestra la imagen de fondo de un elemento values: 	left - top - botton - rigth - center -- 
+		                                                                                                        left - top - botton - rigth - center -- 
+    background-color
+
+
+FlexBox:
+antes pones display:flex;
+
+   flex-direction
+    - flex-flow: row;
+    - flex-flow: row-reverse;
+    - flex-flow: column;
+    - flex-flow:column-reverse;
+
+   fle-wrap
+    - flex-flow: nowrap;
+    - flex-flow: wrap;
+    - flex-flow: wrap-reverse;
+
+   flex-direction and flex-wrap
+    - flex-flow: row nowrap;
+    - flex-flow: column wrap;
+    - flex-flow:column-reverse wrap-reverse;
+
+   valores globales
+    - flex-flow: inherit;
+    - flex-flow: initial;
+    - flex-flow: unset;
+
+
+
+justify-content:
+
+    - justify-content: flex-start;  >>>> Alinear items flex desde el comienzo 
+    - justify-content: flex-end;  >>>  Alinear items desde el final  
+    - justify-content: center;  >>>> Alinear items en el centro
+    - justify-content: space-between; >>>>  Distribuir items uniformemente El primer ítem al inicio, el último al finaL
+    - justify-content: space-around; >>>> Distribuir items uniformemente Los items tienen el mismo espacio a su alrededor
+    - justify-content: space-around;  >>>> Distribuir items uniformemente Los items tienen el mismo espacio a su alrededor
+   
+   
+    /* Valores globales */
+    justify-content: inherit;
+    justify-content: initial;
+    justify-content: unset;
+
+
+align-items:
+
+    - align-items: flex-start; /* Agrupa los elementos flex desde el incio */
+    - align-items: flex-end; /* Agrupa los elementos flex desde el final */
+    - align-items: center; /* Agrupa los elementos alrededor del centro */
+
+    propiedades de los items:
+    
+    Align-self
+        align-self: auto;
+        align-self: flex-start;
+        align-self: flex-end;
+        align-self: center;
+        align-self: baseline;
+        align-self: stretch;
+
+
+    Flex-grow:  indica cómo pueden crecer un hijo por encima del tamaño base para rellenar el espacio sobrante en el padre.
+        Si se aplica a al grupo de items.
+             Flex-grow: 1 (Se reparte en todos los items el espacio sobrante equitativamente).
+        Si se aplica el flex-grow a varios items independientemente, el valor que obtiene será según el valor dado
+            .flex-item-naranja {flex-grow: 3}(x3)
+            .flex-item-azul {flex-grow: 2}(x2)
+
+
+
+    Flex-shrink: lo mismo, pero para reducir el tamaño padre si el contenedor reduce su tamaño, es decir lo que sede el hijo.
+        flex-shrink: 2; (1 es lo que ceden todos los items)
+        flex-shrink: 0.5;
+
+
+    Flex-basis : tamaño inicial del elemento (px, %...) Es lo que ocupa "por defecto". con mayor importancia qué width
+
+        /* Especificar 'width' */
+                flex-basis: 10em;
+                flex-basis: 3px;
+                flex-basis: auto;
+        /* Palabras clave de dimensionamiento intrínseco */
+                flex-basis: max-content;
+                flex-basis: min-content;
+                flex-basis: fit-content;
+        /* Tamaño automático basado en el contenido del elemento flexible */
+                flex-basis: content;
+
+
+Para evitar que se dibuje un borde en un div, tienes varias opciones en CSS, dependiendo de lo que quieras lograr.
+    border-top: none;      /* sin borde arriba */
+    border-right: none;    /* sin borde a la derecha */
+    border-bottom: none;   /* sin borde abajo */
+    border-left: none;
