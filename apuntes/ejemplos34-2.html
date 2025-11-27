@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+body{
+    background: radial-gradient(circle,pink,red,orange);
+    padding: 20px;
+}
+
+.grid-container{
+  display: grid;
+  background: gray;
+  grid-template-rows: repeat(3,200px);
+  grid-template-columns: repeat(3,minmax(200px,150px));
+  justify-content: flex-end;
+  align-content: flex-end;
+  height: 800px;
+  align-items: center;
+  justify-items: center;
+ 
+}
+
+.grid-itm{
+    border: 2px solid #000;
+    background: rgb(115, 252, 2);
+    font-size: 50px;
+    padding: 50px;
+}
+
+
+</style>
+<html>  
+<body>
+    <div class="grid-container">
+    <div class="grid-itm ">1-Gr</div>
+    <div class="grid-itm ">2-Gr</div>
+    <div class="grid-itm">3-Gr</div>
+    <div class="grid-itm ">4-Gr</div>
+    <div class="grid-itm">5-Gr</div>
+    <div class="grid-itm">6-Gr </div>
+    <div class="grid-itm">7-Gr</div>
+    <div class="grid-itm">8-Gr</div>
+    <div class="grid-itm">9-Gr</div>
+  
+  
+</body>
+</html>
