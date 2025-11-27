@@ -18,53 +18,73 @@
     }
 
     .grid-container {
-        display: grid;
-        background: gray;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: space-evenly;
-        align-content: space-evenly;
-        height: 800px;
-        align-items: center;
-        justify-items: center;
+        display: grid; 
+        grid-template-rows: (1fr, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        grid-gap: 10px;
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
 
     }
 
-    .grid-itm {
-        border: 2px solid #000;
-        background: rgb(115, 252, 2);
-        font-size: 50px;
-        padding: 50px;
+    img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+
     }
+
+    img:first-child{
+        grid-column: 1/span 2;
+        grid-row:1/span 2 ;
+        
+    }
+     img:nth-child(2){
+          grid-column:1/span 2 ;
+     }
+     img:nth-child(3){
+          grid-row:1/span 3 ;
+     }
+     img:nth-child(5){
+          grid-column: 2/span;
+          grid-row:2/span 2 ;
+     }
+/*
+
+       
+      
+        
+       
+        <img src="GaleriaG/Imagenesg/imagen7.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen8.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen9.webp" alt="">
+        <img src="GaleriaG/Imagenesg/imagen10.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen11.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen12.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen13.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen14.png" alt="">
+        <img src="GaleriaG/Imagenesg/imagen15.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen16.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen17.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen18.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen19.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen20.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen21.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen22.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen23.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen24.jpeg" alt="">
+*/
 </style>
 <html>
 
 <body>
     <div class="grid-container">
         <img src="GaleriaG/Imagenesg/imagen1.jpeg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen2.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen3.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen4.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen5.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen6.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen7.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen8.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen9.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen10.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen11.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen12.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen13.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen14.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen15.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen16.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen17.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen18.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen19.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen20.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen21.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen22.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen23.jprg" alt="">
-        <img src="GaleriaG/Imagenesg/imagen24.jprg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen2.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen3.webp" alt="">
+        <img src="GaleriaG/Imagenesg/imagen4.jpeg" alt="">
+        <img src="GaleriaG/Imagenesg/imagen5.jpeg" alt="">
+     <img src="GaleriaG/Imagenesg/imagen6.jpeg" alt="">
     </div>
 </body>
 
