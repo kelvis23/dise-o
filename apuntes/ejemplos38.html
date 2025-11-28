@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: radial-gradient(circle, pink, red, orange);
+        padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height:100vh;
+
+    }
+    .head,.main,.aside,.footer{
+        padding: 20px;
+    }
+    
+    .head {
+        background-color: rgb(172, 242, 245);
+        flex-basis:70px ;
+       
+    }
+    .main {
+        background-color:  rgb(243, 168, 224);
+        flex-basis: 300px;
+        flex-grow: 2;
+        flex-shrink: 0; /*evita que un elemento se encoja dentro de un contenenedor*/
+    }
+     .aside {
+        background-color: lightpink;
+        flex-basis: 200px;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+      .footer {
+        background-color:  lime;
+        flex-basis: 70px;
+        flex-grow: 1;
+        
+    }
+    
+    @media screen and (min-width:700){
+    .aside {
+        align-self: flex-end;
+        
+    }
+    
+    }
+   
+</style>
+<html>
+
+<body>
+    <div class="container">
+        <div class=" head "> Con Flex</div>
+        <div class=" main">main </div>
+        <div class=" aside"> aside</div>
+        <div class=" footer">Footer</div>
+   
+        </div>
+
+
+</body>
+
+</html>

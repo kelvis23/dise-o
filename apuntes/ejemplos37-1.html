@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: radial-gradient(circle, pink, red, orange);
+        padding: 20px;
+    }
+
+    .grid-container {
+        display: grid;
+        background: gray;
+        margin: 10px;
+        grid-template-areas:
+       "header header header"
+       "aside aside main"
+       "aside aside main"
+       "aside aside main"
+       "aside aside main"
+       "footer footer footer ";
+        grid-template-rows: repeat(auto-fill 1fr);
+        height: 95vh;
+        border: 5px solid white;
+
+    }
+
+    
+    .grid-header {
+        background-color: rgb(210, 243, 193);
+        grid-area: header;
+    }
+    .grid-main {
+        background-color: rgb(172, 242, 245);
+        grid-area: main;
+    }
+     .grid-aside {
+        background-color: rgb(232, 247, 152);
+        grid-area: aside;
+    }
+      .grid-footer {
+        background-color: rgb(234, 168, 243);
+        grid-area: footer;
+    }
+
+   
+</style>
+<html>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-itm grid-header "> 
+            <a href="#">Enlace 1</a>
+            <a href="#">Enlace 2</a>
+            <a href="#">Enlace 3</a>
+            <a href="#">Enlace 4</a></div>
+        <div class="grid-itm grid-main">
+           hola mundo como estan
+           
+        </div>
+        <div class="grid-itm grid-aside"> 
+            Un texto es una composición de signos codificados en un sistema 
+            de escritura que forma una unidad de sentido. También es una 
+            composición de caracteres imprimibles generados por un algoritmo 
+            de cifrado que, aunque no tienen sentido para cualquier persona, 
+            sí puede ser descifrado por su destinatario original.
+        </div>
+        <div class="grid-itm grid-footer">Footer</div>
+   
+        </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: radial-gradient(circle, pink, red, orange);
+        padding: 20px;
+    }
+
+    .container {
+      padding:25px 5px ;
+      background: lightblue;
+
+    }
+    
+    
+    .caja {
+        background :lightcyan;
+        height: 150px;
+        width: 150px;
+        margin: 20px;
+        animation-name:movimiente;
+        animation-duration:2s ; 
+        position: relative;
+       
+    }
+   
+@keyframes movimiente{
+   0%{
+       left: 0;
+       background: lightslategrey;
+   }
+   50% {
+       background: lime;
+   }
+   100% {
+       left: 80%;
+       background: blue;
+   }
+}
+   
+</style>
+<html>
+
+<body>
+    <div class="container">
+        <div class=" caja "> </div>
+       
+   
+        </div>
+
+
+</body>
+
+</html>
