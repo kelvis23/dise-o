@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Layout</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: radial-gradient(circle, pink, red, orange);
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .head, .main, .aside, .footer {
+        padding: 20px;
+    }
+
+    .head {
+        background-color: rgb(172, 242, 245);
+        height: 70px;
+        flex-shrink: 0;
+    }
+
+    .main {
+        background-color: rgb(243, 168, 224);
+        flex: 1;
+    }
+
+    .aside {
+        background-color: lightpink;
+        flex: 1;
+    }
+
+    .footer {
+        background-color: lime;
+        height: 70px;
+        flex-shrink: 0;
+    }
+
+   
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    @media screen and (min-width: 700px) {
+        .content {
+            flex-direction: row;
+        }
+
+        .main {
+            flex: 2;
+        }
+
+        .aside {
+            flex: 1;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="head">Con Flex</div>
+    
+    <div class="content">
+        <div class="main">Main</div>
+        <div class="aside">Aside</div>
+    </div>
+    
+    <div class="footer">Footer</div>
+</body>
+</html>

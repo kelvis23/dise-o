@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Layout</title>
+
 <style>
     * {
         margin: 0;
@@ -12,70 +12,68 @@
     }
 
     body {
-        background: white
-        
+        background: radial-gradient(circle, pink, red, orange);
+        padding: 20px;
     }
 
-    .grid-container {
+    
+    .container {
         display: grid;
-        background: gray;
-        margin: 10px;
-        grid-template-rows:
-        [linea1]
-        150px
-        [linea2]
-        150px
-        [linea3]
-        150px
-        [lineafinal];
-        grid-template-columns:
-        [linainicial]
-        99vh
-        150px 
-        150px 
-        [lineafinal];
-    
-        height: 99vh;
-        width: 100%;
-        
-     
-
-    }
-
-    
-    .grid-header {
-        background-color: rgb(172, 242, 245);
-        grid-row: linea1/linea3;
-        grid-column: 1/lineafinal;
-    }
-    .grid-main {
-        background-color:  rgb(243, 168, 224);
-       grid-row:linea1/linea2;
-       grid-column: 2/lineafinal;
-    }
-     .grid-aside {
-        background-color: rgb(247, 217, 152);
+        height: 100vh;
+        grid-template-rows: 70px 1fr 40px 70px;
+        grid-template-columns: 1fr;
        
     }
-      .grid-footer {
-        background-color:  rgb(210, 243, 193);
-        
+
+    .head, .main, .aside, .footer {
+        padding: 20px;
     }
 
-   
+    .head {
+        background-color: rgb(172, 242, 245);
+    }
+
+    .main {
+        background-color: rgb(243, 168, 224);
+    }
+
+    .aside {
+        background-color: lightpink;
+    }
+
+    .footer {
+        background-color: lime;
+    }
+
+    @media screen and (min-width: 700px) {
+        .container {
+            /*  header, contenido, footer */
+            grid-template-rows: 70px 1fr 70px;
+
+            /*  main y aside */
+            grid-template-columns: 2fr 1fr;
+
+            /* Definimos el área de cada cosa */
+            grid-template-areas:
+                "head head"
+                "main aside"
+                "footer footer";
+        }
+
+        .head { grid-area: head; }
+        .main { grid-area: main; }
+        .aside { grid-area: aside; }
+        .footer { grid-area: footer; }
+    }
 </style>
-<html>
+</head>
 
 <body>
-    <div class="grid-container">
-        <div class="grid-itm grid-header "> Con Flex</div>
-        <div class="grid-itm grid-main">main </div>
-        <div class="grid-itm grid-aside"> aside</div>
-        <div class="grid-itm grid-footer">Footer</div>
-   
-        </div>
-
-
+    <div class="container">
+        <div class="head">Con Grid</div>
+        <div class="main">Main</div>
+        <div class="aside">Aside</div>
+        <div class="footer">Footer</div>
+    </div>
 </body>
-
 </html>
