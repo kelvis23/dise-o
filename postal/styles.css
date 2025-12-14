@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Tipografía y colores generales */
+/* body */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     min-height: 100vh;
@@ -13,13 +13,13 @@ body {
     flex-direction: column;
     color: #ffffff;
 
-    /* Fondo combinado: gradiente + imagen */
+  
     background-image: linear-gradient(rgba(11, 61, 46, 0.3), rgba(20, 90, 68, 0.3)), 
     url('img/fondo.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* para efecto parallax */
+    background-attachment: fixed; 
 
    
 }
@@ -79,7 +79,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* ❄ Nieve */
+/* Nieve */
 .nieve {
     position: absolute;
     top: -10%;
