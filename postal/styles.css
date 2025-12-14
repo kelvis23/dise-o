@@ -8,11 +8,20 @@
 /* Tipografía y colores generales */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(#0b3d2e, #145a44);
-    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: #ffffff;
+
+    /* Fondo combinado: gradiente + imagen */
+    background-image: linear-gradient(rgba(11, 61, 46, 0.3), rgba(20, 90, 68, 0.3)), 
+    url('img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* para efecto parallax */
+
+   
 }
 
 /* Header */
