@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        .row {
+            background: salmon;
+            margin-top: 20px;
+            ;
+        }
+
+        .columna {
+            background: beige;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <div class="row  ">
+                <div class="columna col order-4 order-md-1"> columna interior 1.1</div>
+                <div class="columna col order-3 order-md-2"> columna interior 1.1</div>
+                <div class="columna col order-2 order-md-3"> columna interior 1.1</div>
+                <div class="columna col order-1 order-md-4"> columna interior 1.1</div>
+            </div>
+            <div class="row ">
+                <div class="columna col-3 offset-3 offset-sm-6"> columna interior 1.1</div>
+            </div>
+             <div class="row ">
+                <div class="columna col-3 offset-3 "> columna interior 1.1</div>
+                <div class="columna col-3 offset-3 "> columna interior 2.1</div>
+            </div>
+            <!-- en el contenedor  justuify-contenet-vituin  hase lo mimo que ms-auto -->
+                <div class="row  ">
+                <div class="columna col-auto "> kelvis 1.1</div>
+                <div class="columna col-auto ms-auto "> kelvis de jeses moises sanchez 1.1</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
