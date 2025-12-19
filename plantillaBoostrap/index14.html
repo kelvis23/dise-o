@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        header {
+            background: blueviolet;
+            margin-top: 20px;
+
+        }
+
+        .gallery {
+            padding: 80px;
+        }
+
+        aside {
+            background: skyblue;
+
+        }
+
+        section {
+            background: orange;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row-mt-4">
+            <div class="col">
+                <div class="accordion " id="lecciones">
+                    <!-- Elemento nro.1 -->
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header" id="encabezado-1">
+                            <!-- classe atrivuto y etiqueta  -->
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#elemento-1" aria-expanded="true" aria-controls="elemento-1">
+                                tema# 1
+                            </button>
+                        </h2>
+                        <div id="elemento-1" class="accordion-collapse collapse show" aria-labelledby="encabezado-1"
+                            data-bs-parent="#lecciones">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consetur saepe? Ea, at delectus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Elemento nro.2 -->
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header" id="encabezado-2">
+                            <!-- classe atrivuto y etiqueta  -->
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#elemento-2" aria-expanded="true" aria-controls="elemento-2">
+                                tema# 2
+                            </button>
+                        </h2>
+                        <div id="elemento-2" class="accordion-collapse collapse  " aria-labelledby="encabezado-2"
+                            data-bs-parent="#lecciones">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consetur saepe? Ea, at delectus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Elemento nro.3 -->
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header" id="encabezado-3">
+                            <!-- classe atrivuto y etiqueta  -->
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#elemento-3" aria-expanded="true" aria-controls="elemento-3">
+                                tema# 3
+                            </button>
+                        </h2>
+                        <div id="elemento-3" class="accordion-collapse collapse  " aria-labelledby="encabezado-3"
+                            data-bs-parent="#lecciones">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consetur saepe? Ea, at delectus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
