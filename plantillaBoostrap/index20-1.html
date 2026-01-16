@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desplegable</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <div class="carousel slide " id="prime-carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner  ">
+
+                        <div class="carousel-item active">
+                            <img class="ing-fluid" src="img/carousel1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item " data-bs-interval="50000">
+                            <img src="img/granada.jpeg" alt="">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="img/nieve.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <button class=" carousel-control-prev" type="button" data-bs-targer="#primer-carousel"
+                    data-bs-sline="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></samp>
+                        <samp class="visually-hidden">anterior</samp>
+
+                </button>
+                <button class=" carousel-control-next" type="button" data-bs-targer="#primer-carousel"
+                    data-bs-sline="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></samp>
+                        <samp class="visually-hidden">anterior</samp>
+                </button>
+                <div class="carousel-indicators">
+                    <button 
+                    class="active"
+                    data-bs-targer="#primer-carousel"
+                    data-bs-sline-to="0"
+                    aria-label="slide 1"
+                    type="button"></button>
+                      <button 
+                    class=""
+                    data-bs-targer="#primer-carousel"
+                    data-bs-sline-to="1"
+                    aria-label="slide 2"
+                    type="button"></button>
+                      <button 
+                    class=""
+                    data-bs-targer="#primer-carousel"
+                    data-bs-sline-to="2"
+                    aria-label="slide 3"
+                    type="button"></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

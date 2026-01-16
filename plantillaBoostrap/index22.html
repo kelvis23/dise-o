@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desplegable</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col6">
+                <form action="">
+                    <div class="mb-3">
+                        <label for="correo" class="for-label">correo Electronico</label>
+                        <input type="text" class="for-control" id="correo" aria-describedby="ayuda-correo">
+                        <div id="ayuda-correo" class="form-text">te enviamos un mensaje de confirmacion</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="for-label">mensaje</label>
+                        <textarea class="for-control" name="mensaje" id="mensaje"></textarea>
+                        <button type="submit" class="btn">te enviamos un mensaje de confirmacion
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col6">
+            <form action="">
+                <input type="text" class="for-control for-control-lg mg-3" placeholder="Input Grande">
+                <input type="text" class="for-control for-control-sm mb-3" placeholder="Input Pequeño">
+                <input type="text" class="for-control  mb-3" placeholder="Desabilitado">
+                <input type="text" class="for-control mb-3" placeholder="sollectura " readonly>
+                <input type="text" class="for-control-plaintext mb-3" placeholder="Input Grande">
+                <input type="text" class="for-control for-control-lg mg-3" placeholder="Input solo lectura" readonly>
+                <label for="correo" class="for-label">correo Electronico</label>
+                <input type="text" class="for-control" id="correo" aria-describedby="ayuda-correo">
+            </form>
+        </div>
+
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
