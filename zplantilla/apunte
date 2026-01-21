@@ -1,0 +1,104 @@
+// GRID  LAYOUT 5
+
+
+Grid Container : Es el contenedor completo Todo lo que contiene el grid se aplica cuando ponemos
+display: grid
+
+Grid Item : Son todos los elementos que están en el container Los elementos dentro del item ya no son Grid Item solo los hijos directos del contenedor.
+
+Grid Cell: Son todos las celdas de la grilla.Pueden ser cuadros, rectángulos, siempre cuadriláteros con lados paralelos. 
+
+Grid Tracks (Column and Rows) : Igual que en flex se pueden manejar las columnas y filas 
+Grid tracks son el total de filas y columnas = 8 Grid Tracks Las rows y column tiene su Start y End
+
+
+Grid Area: Es la unión de las celdas respetando la forma cuadrática No son Grid área, la composición que forman L, T u otros que no respeten 
+las formas rectangulares o cuadradas. Deben ser consecutivas
+
+Grid Line:Son las líneas que separan las celdas o áreas. Empieza desde los bordes exteriores. Column Line, delimitan las columnas  Row Line, delimitan las filas 
+
+fr:  toma el espacio libre del contenedor y lo divide en partes proporcionales.
+
+Grid-row: start/end  
+Grid-colum: start/end
+Nos ayuda a definir donde inicia o termina una celda se divide linea del principio y linia final 
+
+
+Automatizar el crear columnas y filas 	:
+En el contenedor definimos como distribuimos las celdas por columnas y filas
+grid-template-rows: 150px 150px 150px
+También pueden expresarse de la siguiente manera:
+grid-template-rows: repeat(3, 150px);
+
+
+Grid Implicito/Explicito:
+Implícito: Las celdas que quedan sin ser definidas (10,11,12)
+Explícito: La que se asignaron sus características con template
+grid-auto-rows: (Igual que template una fila)
+grid-auto-columns: (igual que template columna)
+grid-auto-flow: row(default), column (Default)
+
+
+Grid Dinámico:
+Para hacer que un grid sea o actúe de forma dinámica hay que trabajar con estructuras dinámicas
+min-max -> Define un tamaño mínimo y uno máximo para filas o columnas.
+min-content -> Tamaño mínimo posible sin que el contenido se desborde
+max-content -> Tamaño máximo del contenido sin hacer saltos de línea.
+auto-fill (cantidad) ->Crea tantas columnas como quepan en el contenedor.
+auto-fit (cantidad) ->similar a auto-fill, pero colapsa las columnas vacías.
+
+ repeat() sirve para repetir columnas o filas sin escribirlas una por una.
+
+Grid-gap: row/column
+Es la distancia entre celdas, es como un margin entre celdas, respectivamente entre cada borde
+Usamos un valor y los asume arriba y abajo pero no con los bordes del grid container solo entre celdas
+Si le damos 2 valores, corresponden el primero al espacio lineal de celdas y el segundo a las columnas
+
+Alineación y control de Flujo
+justify-items (Horizontalmente) ->Alinea el contenido dentro de cada celda, en el eje X.
+align-items (Verticalmente) -> Alinea el contenido dentro de cada celda, en el eje Y.
+aling-content (center - end - start) -> Mueve todo el grid en el eje Y.
+justify-content (center - end - start) ó flex-end -> Mueve todo el grid en el eje X.
+
+space-arround -> Espacio alrededor de cada elemento
+space-between -> Espacio solo ENTRE los elementos
+space-evenly -> Espacio exactamente igual en todos lados
+
+Alineación de los items
+aling-self (flex-start , flex-end, flex-center)
+justify-self (flex-start , flex-end, flex-center)
+place-self
+
+
+
+
+//Animaciones
+animation-name -> Define el nombre de la animación que quieres usa;
+animation-duration: duration; -> Define cuánto dura la animación.
+animation-delay: delay; (Demora) -> Es el tiempo que espera antes de empezar la animación.
+animation-timing-function: (Transition values); ->Controla cómo progresa la animación a lo largo del tiempo
+animation-iteration-count: number; ->Indica cuántas veces se repetirá la animación
+animation-direction: normal | reverse | alternate | alternate reverse; ->Controla la dirección de la animación cada vez que se repite
+animation-fill-mode: none | forwards | backwards | both | initial | inherit; -> Define cómo se aplica el estilo antes y después de la animación.
+
+ Transition:
+transition-property: property/ies - all - none -> Qué propiedad CSS cambiará suavemente
+transition-duration: duration /s -> Cuánto tiempo dura la transición
+transition-delay: delays (Demora) ->Cuánto tiempo espera antes de iniciar
+transition-timing-function: -> Define cómo progresa la transición desde el inicio hasta el final.
+
+Transform  ->La propiedad transform permite modificar la forma, posición o rotación de un elemento
+transform: translateX - translateY - translate (x-y) -- usar % o unidades relativas al elemento  -> Mueve un elemento horizontal y/o verticalmente.
+transform: scale X - scale Y - scale (xy - x,y)  ->Cambia el tamaño del elemento.
+transform: rotate(angleUnit) - rotate X(angleunit) - rotate Z(angleunit) -> Rota un elemento en grados alrededor de un eje.
+transform: skew(angleUnit) -> Inclina un elemento en horizontal y vertical.
+
+Filter -> permite aplicar efectos visuales a un elemento, como desenfoque, brillo, contraste, saturación, etc.
+filter: blur (px); ->específicamente desenfoca un elemento
+filter: brightness(3); ->La función brightness() modifica el brillo de un elemento,
+filter: drop-shadow -> agrega una sombra proyectada a un elemento.
+filter: grayscale(0-1) ->convierte un elemento a escala de grises,
+filter: hue-rotate(deg) ->Cambia el matiz (hue) de los colores de un elemento
+filter: invert(%) ->Invierte todos los colores de un elemento
+filter: opacity(0-1) -> Controla la transparencia de un elemento.
+filter: sepia % -> Convierte los colores de un elemento en tonos marrón/amarillo
