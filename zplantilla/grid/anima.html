@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Fondo negro para que resalte */
+  }
+
+  /* El contenedor necesita un filtro de contraste alto para el efecto de fusión */
+  .container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #000;
+    filter: blur(15px) contrast(30); /* Este es el truco de la "fusión" */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #00ffcc; /* Color turquesa brillante */
+    border-radius: 50%;
+  }
+
+  /* Círculo 1: Se mueve a la derecha */
+  .c1 {
+    animation: move1 3s infinite alternate ease-in-out;
+  }
+
+  /* Círculo 2: Se mueve a la izquierda */
+  .c2 {
+    animation: move2 3s infinite alternate ease-in-out;
+  }
+
+  @keyframes move1 {
+    from { transform: translateX(-80px); }
+    to { transform: translateX(20px); }
+  }
+
+  @keyframes move2 {
+    from { transform: translateX(80px); }
+    to { transform: translateX(-20px); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+  </div>
+
+</body>
+</html>

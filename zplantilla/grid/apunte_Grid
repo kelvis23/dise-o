@@ -76,10 +76,37 @@ place-self
 animation-name -> Define el nombre de la animación que quieres usa;
 animation-duration: duration; -> Define cuánto dura la animación.
 animation-delay: delay; (Demora) -> Es el tiempo que espera antes de empezar la animación.
+
 animation-timing-function: (Transition values); ->Controla cómo progresa la animación a lo largo del tiempo
+linear->velosidad costante
+ease-in -> Empieza lento y termina rápido
+ease-out -> Empieza rápido y termina lento
+ease-in-out -> Lento → rápido → lento
+
+
 animation-iteration-count: number; ->Indica cuántas veces se repetirá la animación
 animation-direction: normal | reverse | alternate | alternate reverse; ->Controla la dirección de la animación cada vez que se repite
 animation-fill-mode: none | forwards | backwards | both | initial | inherit; -> Define cómo se aplica el estilo antes y después de la animación.
+
+
+@keyframes movimiento {
+   0%{
+       left: 0;
+       background: lightslategrey;
+   }
+   50% {
+       background: lime;
+   }
+   100% {
+       left: 80%;
+       background: blue;
+   }
+}
+
+
+
+
+
 
  Transition:
 transition-property: property/ies - all - none -> Qué propiedad CSS cambiará suavemente
@@ -89,6 +116,7 @@ transition-timing-function: -> Define cómo progresa la transición desde el ini
 
 Transform  ->La propiedad transform permite modificar la forma, posición o rotación de un elemento
 transform: translateX - translateY - translate (x-y) -- usar % o unidades relativas al elemento  -> Mueve un elemento horizontal y/o verticalmente.
+
 transform: scale X - scale Y - scale (xy - x,y)  ->Cambia el tamaño del elemento.
 transform: rotate(angleUnit) - rotate X(angleunit) - rotate Z(angleunit) -> Rota un elemento en grados alrededor de un eje.
 transform: skew(angleUnit) -> Inclina un elemento en horizontal y vertical.

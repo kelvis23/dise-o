@@ -5,6 +5,7 @@ La principal diferencia es que Flexbox es útil si querés generar una disposici
 
 
 Las clases .col-* indican cuántas columnas ocupa un elemento según el tamaño de la pantalla.
+(En Bootstrap puedes crear hasta 12 columnas por fila)
 
 col: Es el tamaño más pequeño
 .col-sm: Pensado para celulares grandes
