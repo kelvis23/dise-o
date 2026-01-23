@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid fr</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body{
+      background: greenyellow;
+    }
+.caja {
+  background-color: lightblue;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1 class="text-muted">Título H1</h1>
+      <h2 class="text-muted">Título H2</h2>
+      <h3 class="text-muted">Título H3</h3>
+      <h4 class="text-muted">Título H4</h4>
+      <h5 class="text-muted">Título H5</h5>
+      <h6 class="text-muted">Título H6</h6>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <!-- Semántica correcta -->
+      <h1>Este es el H1 real</h1>
+
+      <!-- Se ve como H1 pero semánticamente es H2 -->
+      <h2 class="h1">Este se ve como H1</h2>
+
+      <h3 class="h2">Se ve como H2</h3>
+      <h4 class="h3">Se ve como H3</h4>
+      <h5 class="h4">Se ve como H4</h5>
+      <h6 class="h5">Se ve como H5</h6>
+
+      <!-- También puedes usar hasta h6 -->
+      <p class="h6">Este párrafo se ve como H6</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1 class="display-1">Display 1</h1>
+      <h1 class="display-2">Display 2</h1>
+      <h1 class="display-3">Display 3</h1>
+      <h1 class="display-4">Display 4</h1>
+      <h1 class="display-5">Display 5</h1>
+      <h1 class="display-6">Display 6</h1>
+
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col">
+
+      <p class="lead">
+        Este es un párrafo destacado con la clase <strong>lead</strong>. Se usa para resúmenes o introducciones.
+      </p>
+
+      <p class="text-center">
+        Este texto está centrado con la clase <strong>text-center</strong>.
+      </p>
+
+      <blockquote class="blockquote">
+        <p class="mb-0">
+          "Esta es una cita formateada con <strong>blockquote</strong>."
+        </p>
+        <footer class="blockquote-footer">
+          Autor de la cita <cite title="Source Title">Fuente</cite>
+        </footer>
+      </blockquote>
+
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col">
+
+      <p class="fw-bold">Texto bold</p>
+      <p class="fw-normal">Texto Normal</p>
+      <p class="fw-light">Texto light</p>
+
+      <p class="fst-italic">Texto Italic</p>
+      <p class="fst-normal">Texto con Font-Style normal</p>
+
+      <p class="text-decoration-underline">Texto subrayado</p>
+      <p class="text-decoration-line-through">Texto tachado</p>
+
+      <a href="#" class="text-decoration-none">Enlace sin subrayado</a>
+
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-12">
+      <hr>
+      <p class="text-start">Texto alineado a la izquierda</p>
+      <p class="text-center">Texto alineado al centro</p>
+      <p class="text-end">Texto alineado a la derecha</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-12">
+      <p class="text-start text-sm-end">
+        Alineado a la derecha en dispositivos pequeños en adelante
+      </p>
+      <p class="text-start text-md-end">
+        Alineado a la derecha en dispositivos medianos en adelante
+      </p>
+      <p class="text-start text-lg-end">
+        Alineado a la derecha en dispositivos grandes en adelante
+      </p>
+      <p class="text-start text-xl-end">
+        Alineado a la derecha en dispositivos extra grandes en adelante
+      </p>
+    </div>
+  </div>
+<br>
+  <p class="text-lowercase">minusculas - Lorem ipsum dolor sit amet consectetur.</p>
+<p class="text-uppercase">MAYUSCULAS - Lorem ipsum dolor sit amet consectetur.</p>
+<p class="text-capitalize">Letras Capitales - Lorem ipsum dolor sit amet consectetur.</p>
+
+<p class="fs-1">Font Size 1</p>
+<p class="fs-2">Font Size 2</p>
+<p class="fs-3">Font Size 3</p>
+<p class="fs-4">Font Size 4</p>
+<p class="fs-5">Font Size 5</p>
+<p class="fs-6">Font Size 6</p>
+</div>
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+Textos colores y fondos
+<p class="text-primary">1 .text-primary</p>
+<p class="text-secondary">2 .text-secondary</p>
+<p class="text-success">3 .text-success</p>
+<p class="text-dark">4 .text-dark</p>
+<p class="text-body">5 .text-body</p>
+<p class="text-muted">6 .text-muted</p>
+<p class="text-warning">t .text-warning</p>
+
+<p class="text-warning bg-dark">t .text-warning</p>
+<p class="text-info bg-dark">t .text-warning</p>
+<p class="text-light bg-dark">t .text-warning</p>
+<p class="text-white bg-dark">t .text-warning</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-black-50</p

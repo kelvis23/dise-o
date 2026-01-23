@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid fr</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+.badge-sm {
+  font-size: 0.75rem;
+  padding: 0.25em 0.4em;
+}
+  
+</style>
+
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Perfil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mensajes</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Contenido de la tarjeta con menú de navegación.</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <ul class="nav nav-pills mb-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Opción 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Opción 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Opción 3</a>
+      </li>
+    </ul>
+
+    <p class="card-text">Contenido de la tarjeta.</p>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Menú</h5>
+
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Ajustes</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Inicio</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Perfil</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-body">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel">
+        Contenido de Inicio.
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel">
+        Contenido de Perfil.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card bg-dark text-warning">
+  <div class="card-body">
+    <h5 class="card-title">Card Oscura</h5>
+    <p class="card-text">Esta es una tarjeta con fondo oscuro y texto en amarillo.</p>
+    <a href="#" class="btn btn-warning">Acción</a>
+  </div>
+</div>
+
+<div class="card bg-dark text-warning border-warning shadow">
+  <div class="card-body">
+    <h5 class="card-title">Card Oscura con borde</h5>
+    <p class="card-text">Se puede agregar borde y sombra para resaltar.</p>
+    <a href="#" class="btn btn-outline-warning">Acción</a>
+  </div>
+</div>
+
+<div class="card bg-dark text-warning">
+  <div class="card-header border-warning">
+    Cabecera
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Título</h5>
+    <p class="card-text">Contenido principal.</p>
+  </div>
+  <div class="card-footer border-warning">
+    Pie de card
+  </div>
+</div>
+
+<div class="card-group">
+  <div class="card">
+
+    <div class="card-body">
+      <h5 class="card-title">Card 1</h5>
+      <p class="card-text">Contenido de la tarjeta 1.</p>
+    </div>
+  </div>
+
+  <div class="card">
+   
+    <div class="card-body">
+      <h5 class="card-title">Card 2</h5>
+      <p class="card-text">Contenido de la tarjeta 2.</p>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="card-body">
+      <h5 class="card-title">Card 3</h5>
+      <p class="card-text">Contenido de la tarjeta 3.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card 1</h5>
+        <p class="card-text">Contenido.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card 2</h5>
+        <p class="card-text">Contenido.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card 3</h5>
+        <p class="card-text">Contenido.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-group">
+  <div class="card border-primary shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">Card 1</h5>
+      <p class="card-text">Contenido.</p>
+    </div>
+  </div>
+
+  <div class="card border-success shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">Card 2</h5>
+      <p class="card-text">Contenido.</p>
+    </div>
+  </div>
+</div>
+
+ <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

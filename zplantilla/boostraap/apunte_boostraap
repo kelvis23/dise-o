@@ -1,0 +1,507 @@
+// Bootstrap
+Bootstrap es un framework front-end utilizado para desarrollar aplicaciones web y sitios mobile first, o sea, con un layout que se adapta a la pantalla del dispositivo utilizado por el usuario. Es uno de los frameworks de diseño web más populares de los últimos años, se caracteriza por su facilidad de uso, la curva de aprendizaje, y la documentación que tiene.
+
+La principal diferencia es que Flexbox es útil si querés generar una disposición de tus elementos en una sola dimensión, específicamente si querés por ejemplo una disposición de columnas o filas, pero si o si debes decidirte por una. Mientras que CSS Grid es especialmente poderoso para diseños en dos dimensiones, por ejemplo una disposición de filas y columnas al mismo tiempo, en una galería de imágenes
+
+
+Las clases .col-* indican cuántas columnas ocupa un elemento según el tamaño de la pantalla.
+
+col: Es el tamaño más pequeño
+.col-sm: Pensado para celulares grandes
+.col-md: Tablets o pantallas medianas ,Muy usado para diseño responsive
+.col-lg:Laptops y pantallas grandes
+.col-xl:Monitores grandes
+col-xxl: muy grandex
+
+Podemos alinear los ítems verticalmente si le damos un alto de fila
+div class="row align-items-start"> :  Alinea las columnas arriba
+div class="row align-items-center"> : Centra verticalmente todas las columnas dentro de la fila.
+div class="row align-items-end" : Alinea las columnas abajo
+
+
+Podemos alinear los ítems verticalmente también de forma independiente.
+div class="col align-self-start">Columna #1<
+div class="col align-self-center">Columna #2
+div class="col align-self-end">Columna #3
+
+Podemos alinear los ítems también de forma horizontal. Bootstrap ya aplica flex y grid a todos sus elementos
+div class="row justify-content-start"> : Alinea las columnas a la izquierda
+div class="row justify-content-center"> : Centra las columnas horizontalmente dentro de la fila.
+div class="row justify-content-end"> : Alinea las columnas a la derecha
+
+Podemos alinear los ítems también de forma horizontal. Bootstrap ya aplica flex y grid a todos sus elementos
+div class="row justify-content-around" :Distribuye el espacio alrededor de cada columna,
+div class="row justify-content-between":Pone la primera columna al inicio y la última al final, y distribuye el espacio entre las columnas.
+div class="row justify-content-evenly" :Distribuye el espacio de forma uniform
+
+Gutters son el relleno entre las columnas, que se utilizan para espaciar y alinear el contenido de manera receptiva en el sistema de cuadrícula Bootstrap.
+g-0 → sin espacio
+g-5 → espacio grande
+g-6 → espacio aún muy grande
+
+Order order-first, order-last
+<div class="contenido col order-4">Columna #1</div>
+<div class="contenido col order-3">Columna #2</div>
+<div class="contenido col order-2">Columna #3</div>
+<div class="contenido col order-1">Columna #4</div>
+
+También se puede aplicar para que en un determinado tamaño regresen a su orden correcto 
+(en pantayas pequeña seve  en orden invertido )
+<div class="contenido col order-4 order-md-1">Columna #1</div>
+<div class="contenido col order-3 order-md-2">Columna #2</div>
+<div class="contenido col order-2 order-md-3">Columna #3</div>
+<div class="contenido col order-1 order-md-4">Columna #4</div>
+
+Offset Determina el espacio inicial que le queremos dar recuerda bootstrap maneja 12 columnas como base
+div class="col-4 offset-4 :La segunda columna se mueve 4 columnas a la derecha
+
+col-auto  : hace que la columna tome únicamente el ancho necesario
+
+
+
+
+
+
+//Tipografía, Imágenes y Tablas
+
+//Tipografías
+En un archivo base de bootstrap generamos un
+contenedor→Fila→columna, de H1 a H6
+Class=”text-muted”
+
+Para que los H1 no pierdan su sentido semántico con el uso de h1, podemos usar:
+(hace que cualquir texto se vea como un h1 o ...)
+Class=”h1”
+.
+..
+Class=”h6”
+
+Display para textos sobre los sliders u otros: ( sirven para crear títulos grandes y llamativos)
+Class=”display-1”
+.
+..
+Class=”display-6”
+
+Textos para formatos en párrafos.
+class=”lead”; : Sirve para resaltar un párrafo como intro o resumen (texto más grande y espaciado).
+class=”text-center”; : Centra el texto horizontalmente.
+class=”blockquote”; : Da formato a una cita (con sangría y estilo especial).
+class=”blockquote-footer”; : Sirve para indicar el autor o fuente de la cita.
+
+Textos para formatos en párrafos.
+<p class="fw-bold">Texto bolt</p>
+<p class="fw-normal">Texto Normal</p>
+<p class="fw-light">Texto light</p>
+<p class="fst-italic">Texto Italic</p>
+<p class="fst-normal">Texto con Font-Style normal</p>
+<p class="text-decoration-underline">Texto subrrayado</p>
+<p class="text-decoration-line-through">Texto tachado</p>
+<a href="#" class="text-decoration-none">enlace sin subrayado</a>
+
+Textos alineados de forma responsive.
+
+<div class="col-12">
+     <hr>
+     <p class="text-start">Texto alineado a la Izquierda</p>
+     <p class="text-center">Texto alineado al centro</p>
+     <p class="text-end">Texto alineado a la derecha</p>
+</div>
+<hr>
+<div class="col-12">
+     <p class="text-start text-sm-end">alienado a la derecha en dispositivos pequelos en adelante</p>
+    <p class="text-start text-md-end">alienado a la derecha en dispositivos medianos en adelante</p>
+     <p class="text-start text-lg-end">alienado a la derecha en dispositivos largos en adelante</p>
+    <p class="text-start text-xl-end">alienado a la derecha en dispositivos extras en adelante</p>
+</div>
+
+  Textos tipos y tamaños
+<p class="text-lowercase">minusculas - Lorem ipsum dolor sit amet consectetur.</p>
+<p class="text-uppercase">MAYUSCULAS - Lorem ipsum dolor sit amet consectetur.</p>
+<p class="text-capitalize">Letras Capitales - Lorem ipsum dolor sit amet consectetur.</p>
+
+<p class="fs-1">Font Size 1</p>
+<p class="fs-2">Font Size 2</p>
+<p class="fs-3">Font Size 3</p>
+<p class="fs-4">Font Size 4</p>
+<p class="fs-5">Font Size 5</p>
+<p class="fs-6">Font Size 6</p>
+
+</div>
+
+Textos colores y fondos
+<p class="text-primary">1 .text-primary</p>
+<p class="text-secondary">2 .text-secondary</p>
+<p class="text-success">3 .text-success</p>
+<p class="text-dark">4 .text-dark</p>
+<p class="text-body">5 .text-body</p>
+<p class="text-muted">6 .text-muted</p>
+<p class="text-warning">t .text-warning</p>
+
+<p class="text-warning bg-dark">t .text-warning</p>
+<p class="text-info bg-dark">t .text-warning</p>
+<p class="text-light bg-dark">t .text-warning</p>
+<p class="text-white bg-dark">t .text-warning</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-black-50</p
+
+
+
+
+
+// imagenes 
+<img class="img-fluid"> : Hace que la imagen sea responsive
+
+ float-start  float-end  :Hace que la imagen se alinee a la izquierda o derecha (como flotante).
+
+ img-thumbnail : Le agrega un borde tipo miniatura.
+
+
+<figure class="figure">
+      <img class="img-fluid rounder" src="./img/bg3.jpg" width="400" alt="" >
+           <figcaption class="figure-caption">
+           <p class="text-center">Lorem ipsum dolor sit amet.</p>
+      </figcaption>
+</figure>
+
+
+
+
+
+
+
+Tablas 
+Class=”table” :Aplica el estilo base de Bootstrap a la tabla.
+Class=”table table-striped :Pinta filas alternas con un color suave
+class = table-hover" : Resalta la fila cuando pasas el mouse por encima.
+Class=” table-sm” : Tabla más compacta (menos padding en celdas).
+<caption>Lista empleados</caption> : Texto descriptivo de la tabla (semántico y accesible).
+
+<tr class="table-dark"> Puede usarse en la tabla en la fila o celda
+<div class="table-responsive">Al agregar en la tabla habilita un scroll Horizontal
+<td class="table-active">29</td>Para cambiar los estilos de una celda
+
+<!-- Colores para tabla fila o columna-->
+   .table-primary : Azul
+   .table-secondary :Gris
+   .table-success : verde
+   .table-danger : rojo
+   .table-warning : amarillo
+   .table-info : celeste
+   .table-light : claro
+   .table-dark : oscuro
+
+<!-- Clases de tablas -->
+   .table-striped - Colorea en formato zebra para mejor lectura.
+   .table-hover - Colorea las filas sobre las que pasamos el cursor.
+   .table-bordered - Agrega bordes a la tabla.
+   .border-danger - Colorea el borde.
+   .table-borderless - Quita los bordes, incluso de las filas.
+   .table-sm - Hace una tabla mas compacta quitandole padding a las celdas
+
+
+
+
+
+
+//Desplegables, Alertas, Badges
+
+Desplegables (w_alertas)
+Con las clases, css y js que tiene bootstrap podemos crear efectos desplegables en pocos pasos:
+
+<div class="dropdown"> Es el contenedor principal
+btn → botón básico de Bootstrap
+btn-primary → color azul (estilo primario)
+dropdown-toggle → agrega la flecha y estilo de dropdown
+data-bs-toggle="dropdown" = Le dice a Bootstrap que ese botón abre el menú
+<ul class="dropdown-menu"> dropdown-menu → define el menú que se despliega
+dropdown-item → estilo para cada opción del men
+
+accordion → activa el estilo del acordeón
+id="accordionExample" → identifica el acordeón para poder relacionarlo con sus ítems
+<div class="accordion-item"> Cada accordion-item es un bloque del acordeón
+accordion-header → estilo del encabezado
+id="headingOne" → identificador único para el ítem
+
+accordion-button → estilo del botón
+data-bs-toggle="collapse" → indica que abre/cierrra
+data-bs-target="#collapseOne" → apunta al contenido que se despliega
+
+id="collapseOne" → debe coincidir con data-bs-target
+accordion-collapse collapse → activa la animación de colapso
+show → indica que está abierto por defecto
+data-bs-parent="#accordionExample" → hace que solo un ítem esté abierto a la vez
+accordion-body → estilo del contenido
+
+
+
+//Alertas ((w_alertas))
+Con las clases, css y js que tiene bootstrap podemos crear efectos de alertas en pocos pasos:
+
+<div class="alert alert-primary" role="alert"> Esta es una alerta primaria.
+<div class="alert alert-success" role="alert">  Esta es una alerta de éxito.
+<div class="alert alert-danger" role="alert">  Esta es una alerta de peligro.
+<div class="alert alert-warning" role="alert">Esta es una alerta de advertencia.
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">Esta alerta se puede cerrar.
+alert-dismissible ->Permite que la alerta se cierre
+fade ->Activa animación de desvanecimient
+show -> Hace que se muestre la alerta
+  <button type="button" class="btn-close" data-bs-dismiss="alert"aria-label="Close">
+  btn-close → estilo del botón (cruz pequeña)
+  data-bs-dismiss="alert" → indica que al hacer clic se cierra la alerta
+aria-label="Close" → mejora accesibilidad (para lectores de pantalla)
+
+ 
+ 
+ //Badges
+ Etiquetas con diferentes tamaños, colores y formas
+<span class="badge bg-primary">Normal</span>
+badge → crea la insignia
+bg-primary → color azul
+<span class="badge rounded-pill bg-success">Pill</span >
+rounded-pill → bordes redondeados completos
+bg-success → color verde
+<span class="badge badge-sm bg-danger">Pequeña</span> 
+badge-sm → reduce el tamaño
+bg-danger → color rojo (nesecitas css)
+<span class="badge rounded-circle bg-warning text-dark" style="width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;">7</span>
+rounded-circle->Hace que la badge sea circular
+bg-warning ->Fondo amarillo
+text-dark->Texto oscuro
+
+
+
+//rutas
+Podemos usar los Breadcrumbs para informar al usuario la ruta donde estamos.
+<nav aria-label="breadcrumb"> ->aria-label="breadcrumb" mejora la accesibilidad para lectores de pantalla
+  <ol class="breadcrumb"> -> aplica el estilo de migas de pan
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="#">Productos</a></li>
+    breadcrumb-item define cada parte del breadcrumb
+    <li class="breadcrumb-item active" aria-current="page">Detalles</li>
+    active indica que es la página actual
+     aria-current="page" mejora accesibilidad
+  </ol>
+</nav>
+
+
+
+//Botones
+Bootstrap tiene varios tipos de botones.
+btn ->Es la clase base para todos los botones de Bootstrap.
+
+btn-primary ->Azul	
+btn-secondary->Gris	
+btn-success->Verde	
+btn-danger->Rojo	
+btn-warning ->Amarillo	
+btn-info  ->Celeste	
+btn-light	->Blanco	
+btn-dark	->Negro
+
+btn-sm → pequeño
+btn-lg → grande
+btn-outline->fondo transparente
+(bi bi-check-circle es un icono de Bootstrap Icons)
+w-100: hace que el botón ocupe el 100% del ancho del contenedo
+disabled : no se pueda hacer clic
+rounded-pill redondea los bordes completamente.
+
+<div class="d-flex gap-2"></div>
+d-flex → convierte el contenedor en flexbox
+gap-2 → agrega espacio entre los botones
+
+<a href="#" class="btn btn-primary">Enlace como botón</a>
+<input type="submit" class="btn btn-danger" value="Enviar">
+
+<div class="row">
+  <div class="col-4">
+    <button class="btn btn-primary w-100">1/3 ancho</button>
+  </div>
+  <div class="col-8">
+    <button class="btn btn-secondary w-100">2/3 ancho</button>
+  </div>
+</div>
+
+btn-group >agrupa los botones
+btn-group-vertical
+agrupa los botones verticalmente
+
+Podemos utilizar checkbox y radio como botones y dar la apariencia de botones activos e inactivos.
+<div class="btn-group" role="group" aria-label="Checkbox group">
+role="group" y aria-label ayudan a accesibilidad
+input type="checkbox" con clase btn-check
+
+Podemos crear barras de herramientas y poner los botones verticalmente
+<div class="btn-toolbar" role="toolbar" aria-label="Barra de Herramientas">
+btn-toolbar es un contenedor que permite poner varios btn-group juntos y alinearlos como una barra de herramienta
+role="toolbar" ->Ayuda a la accesibilidad (screen readers)
+
+
+
+
+
+//cards
+Grupo de elementos donde se muestra información en concreto
+
+.card            Establecemos que trabajaremos con una tarjeta (card)
+.card-body       Establecemos cual sera el contenedor del contenido
+.card-title     Establecemos el un texto como titulo de la card
+.card-subtitle  Establecemos un subtitulo para la card
+.card-text      Establecemos el texto de la card.
+.card-link      Establecemos un enlace como boton en la card
+.card-img-top   Establecemos una imagen para la card en la parte superior
+.card-img-bottom Establecemos una imagen para la card en la parte inferior
+
+
+nav → define una lista de navegación
+nav-pills → le da forma de píldoras
+nav-link active → resalta la opción activa
+flex-column convierte la lista en vertical (Perfecto para menús laterales)
+nav-tabs → estilo de pestañas (tabs)
+card-header-tabs → las integra en el header de la card
+data-bs-toggle="tab" → activa el cambio de pestaña
+data-bs-target="#home" → indica qué contenido mostrar
+tab-content → contenedor de contenido de pestañas
+tab-pane → contenido de cada pestañ
+show active → pestaña visible por defecto
+fade → animación al cambiar pestañas
+
+Cards con colores bg-dark, text-warning
+bg-dark ->fondo oscuro
+text-warning ->texto amarillo
+border-warning ->	borde amarillo
+shadow ->sombra debajo de la tarjeta
+btn-outline-warning	-> botón con borde amarillo (sin fondo)
+
+row-cols-1 → en pantallas pequeñas, 1 card por fila
+row-cols-md-3 → en pantallas medianas o mayores, 3 cards por fila
+g-4 → espacio (gap) entre las cards
+border-primary ->borde azul
+border-success	->borde verde
+shadow-sm	sombra -> pequeña
+card-group ->cards unidas
+
+
+
+
+
+//carrusel 
+carousel slide → activa el carrusel con animación
+data-bs-ride="carousel" → inicia el carrusel automáticamente
+carousel-inner → contenedor de slides
+carousel-item active → slide visible al inicio
+carousel-control-prev/next → botones para mover las diapositivas
+
+carousel-indicators -> crea los puntos abajo del carrusel
+Cada botón:
+data-bs-slide-to="0" → indica la posición del slide
+class="active" → muestra cuál está activo
+aria-label → accesibilidad
+
+carousel-caption muestra texto encima de la imagen
+d-none d-md-block oculta el texto en pantallas pequeñas y lo muestra en medianas en adelante
+d-none → oculto en todos
+d-md-block → se muestra desde md
+carousel-dark ->Cambia el estilo de los controles (flechas) a una versión oscura
+carousel-fade ->En vez de deslizar, hace una transición de desvanecimiento entre imágenes.
+
+carousel-control-prev y carousel-control-next ->Botones para moverse hacia atrás o adelante.
+ data-bs-target="#carouselExample" ->Indica el id del carrusel que controla.
+ data-bs-slide="prev" o "next" ->Indica la dirección.
+ visually-hidden ->Texto accesible para lectores de pantalla (no se ve en pantalla).
+
+
+
+ //collepse
+ data-bs-toggle="collapse" → activa el efecto collapse
+data-bs-target="#collapseExample" → indica qué elemento abrir/cerrar
+.collapse → contenedor colapsable
+.accordion	grupo de collapses
+data-bs-parent	cierra los otros
+
+
+
+
+//formulario
+Un formulario sencillo e inputs con diferentes estilos
+form-control → estilo Bootstrap para inputs
+form-label → estilo correcto de etiqueta
+mb-3 → margen inferior
+placeholder → texto de ayuda
+
+form-control-lg → input más alto
+
+form-control-sm → input más compacto
+
+is-valid → borde verde
+
+is-invalid → borde rojo
+invalid-feedback → mensaje de error
+
+disabled → no editable
+
+form-check → contenedor
+form-check-input → checkbox
+form-check-label → texto del checkbox
+
+btn → base del botón
+btn-primary → color principal
+type="submit" → envía el formulario
+
+
+Formularios con selectbox
+form-label → estilo correcto para etiquetas
+form-select → estilo Bootstrap para <select>
+mb-3 → margen inferior
+
+orm-select-sm → reduce la altura del select
+
+form-select-lg → aumenta la altura
+mt-2 → margen superior
+
+disabled → no permite interacción
+multiple → permite seleccionar varias opciones
+Se selecciona con Ctrl / Cmd
+
+row g-3 → fila con espacio entre columnas
+col-md-6 → dos selects en la misma fila desde md
+
+is-valid → borde verde
+is-invalid → borde rojo
+
+
+Formularios con checkbox - radios
+form-check → contenedor
+form-check-input → checkbox
+form-check-label → texto
+
+checked → aparece seleccionado al cargar
+
+disabled → no se puede seleccionar
+
+type="radio" → selección única
+name="sexo" → solo se puede elegir una opción
+
+form-check-inline → coloca los checks en la misma fila
+
+form-switch → convierte el checkbox en un interruptor tipo ON/OFF
+
+is-invalid → borde rojo
+invalid-feedback → mensaje de erro
+
+Formulario grid responsive, considerar siempre añadimos filas y columnas y con las medidas podemos hacerlo responsive.
+
+row ->Crea una fila del sistema de grid.
+g-3 ->Espacio (gap) entre columnas y filas.
+
+(tamao en cada dispositivo)
+col-12 → 100% : Móvil
+col-md-6 → 50% : Tablet (md)
+
+
+Ocupa toda la fila en cualquier tamaño
+Contiene form-check
+
+btn btn-primary → estilo Bootstrap
+w-100 → ancho completo

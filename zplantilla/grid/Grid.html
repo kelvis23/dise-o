@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo Grid Layout</title>
+<style>
+  /* Contenedor principal: Grid Container */
+  .grid-container {
+    display: grid; /* Activamos grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales dinámicas */
+    grid-template-rows: 150px 150px 150px; /* 3 filas explícitas de 150px */
+    grid-gap: 10px; /* Espacio entre celdas */
+    
+    /* Alineación de todo el grid dentro del contenedor */
+    justify-content: center; /* Centrado horizontal del grid */
+    align-content: center;   /* Centrado vertical del grid */
+    
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 100vh; /* Para ver centrado vertical */
+  }
+
+  /* Grid Items */
+  .grid-item {
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.2rem;
+    display: flex; /* Para centrar contenido dentro de la celda */
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  /* Ejemplo de grid area que ocupa varias celdas */
+  .item-big {
+    grid-column: 2 / 4; /* Ocupa de columna 2 a 3 (hasta 4) */
+    grid-row: 1 / 3;    /* Ocupa de fila 1 a 2 (hasta 3) */
+    background-color: #ff5722;
+  }
+
+  /* Alineación individual de un item */
+  .item-self {
+    justify-self: end; /* Mueve horizontalmente el contenido de la celda */
+    align-self: start; /* Mueve verticalmente el contenido de la celda */
+    background-color: #2196f3;
+  }
+
+  /* Grid dinámico con minmax y auto-fit */
+  .dynamic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-rows: 120px;
+    grid-gap: 10px;
+    margin-top: 50px;
+  }
+
+  .dynamic-grid div {
+    background-color: #9c27b0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+</style>
+</head>
+<body>
+
+<h2>Ejemplo Completo de Grid Layout</h2>
+
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item item-big">2-3-6-7 (Área grande)</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item item-self">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+</div>
+
+<h3>Grid Dinámico con auto-fit y minmax</h3>
+<div class="dynamic-grid">
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+  <div>D</div>
+  <div>E</div>
+  <div>F</div>
+  <div>G</div>
+</div>
+
+</body>
+</html>

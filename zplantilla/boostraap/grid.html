@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid fr</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body{
+      background: greenyellow;
+    }
+.caja {
+  background-color: lightblue;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="row ">
+  <div class="col-md-6 caja">
+    Columna principal
+
+    <div class="row  caja">
+      <div class="col-6">Subcolumna 1</div>
+      <div class="col-6">Subcolumna 2</div>
+    </div>
+    <div class="row">
+       <div class="col-6">Subcolumna 1</div>
+      <div class="col-6">Subcolumna 2</div>
+    </div>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row align-items-start" style="height: 200px; background: #f8f9fa;">
+    <div class="col bg-primary text-white">
+      Columna 1
+    </div>
+    <div class="col bg-success text-white">
+      Columna 2
+    </div>
+    <div class="col bg-danger text-white">
+      Columna 3
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row align-items-center" style="height: 200px; background: #f1f1f1;">
+    <div class="col bg-primary text-white">
+      Columna 1
+    </div>
+    <div class="col bg-success text-white">
+      Columna 2
+    </div>
+    <div class="col bg-danger text-white">
+      Columna 3
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row align-items-end" style="height: 200px; background: #f1f1f1;">
+    <div class="col bg-primary text-white">
+      Columna 1
+    </div>
+    <div class="col bg-success text-white">
+      Columna 2
+    </div>
+    <div class="col bg-danger text-white">
+      Columna 3
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" style="height: 200px; background: #f1f1f1;">
+    <div class="col align-self-start bg-primary text-white">
+      Columna #1
+    </div>
+    <div class="col align-self-center bg-success text-white">
+      Columna #2
+    </div>
+    <div class="col align-self-end bg-danger text-white">
+      Columna #3
+    </div>
+  </div>
+</div>
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

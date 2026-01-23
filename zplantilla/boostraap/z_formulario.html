@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid fr</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+.badge-sm {
+  font-size: 0.75rem;
+  padding: 0.25em 0.4em;
+}
+  
+</style>
+
+  </style>
+</head>
+<body>
+  <form>
+  <!-- Input texto normal -->
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+  </div>
+
+  <!-- Input grande -->
+  <div class="mb-3">
+    <label for="email" class="form-label">Email (grande)</label>
+    <input type="email" class="form-control form-control-lg" id="email" placeholder="correo@ejemplo.com">
+  </div>
+
+  <!-- Input pequeño -->
+  <div class="mb-3">
+    <label for="user" class="form-label">Usuario (pequeño)</label>
+    <input type="text" class="form-control form-control-sm" id="user" placeholder="usuario123">
+  </div>
+
+  <!-- Input con estado válido -->
+  <div class="mb-3">
+    <label class="form-label">Campo válido</label>
+    <input type="text" class="form-control is-valid" value="Correcto">
+  </div>
+
+  <!-- Input con estado inválido -->
+  <div class="mb-3">
+    <label class="form-label">Campo inválido</label>
+    <input type="text" class="form-control is-invalid" placeholder="Error">
+    <div class="invalid-feedback">
+      Este campo es obligatorio
+    </div>
+  </div>
+
+  <!-- Input deshabilitado -->
+  <div class="mb-3">
+    <label class="form-label">Deshabilitado</label>
+    <input type="text" class="form-control" disabled placeholder="No editable">
+  </div>
+
+  <!-- Checkbox -->
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" id="check">
+    <label class="form-check-label" for="check">
+      Acepto los términos
+    </label>
+  </div>
+
+  <!-- Botón -->
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+
+<form>
+  <div class="mb-3">
+    <label for="pais" class="form-label">País</label>
+    <select class="form-select" id="pais">
+      <option selected>Seleccione un país</option>
+      <option value="1">España</option>
+      <option value="2">México</option>
+      <option value="3">Argentina</option>
+    </select>
+  </div>
+</form>
+
+<select class="form-select form-select-sm">
+  <option>Pequeño</option>
+</select>
+
+<select class="form-select form-select-lg mt-2">
+  <option>Grande</option>
+</select>
+
+<select class="form-select" disabled>
+  <option>Opción deshabilitada</option>
+</select>
+
+<select class="form-select" multiple>
+  <option>HTML</option>
+  <option>CSS</option>
+  <option>JavaScript</option>
+</select>
+<form class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Ciudad</label>
+    <select class="form-select">
+      <option>Madrid</option>
+      <option>Barcelona</option>
+    </select>
+  </div>
+
+  <div class="col-md-6">
+    <label class="form-label">Idioma</label>
+    <select class="form-select">
+      <option>Español</option>
+      <option>Inglés</option>
+    </select>
+  </div>
+</form>
+
+<select class="form-select is-valid">
+  <option>Correcto</option>
+</select>
+
+<select class="form-select is-invalid">
+  <option>Error</option>
+</select>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="check1">
+  <label class="form-check-label" for="check1">
+    Acepto los términos y condiciones
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="check2" checked>
+  <label class="form-check-label" for="check2">
+    Opción marcada
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="check3" disabled>
+  <label class="form-check-label" for="check3">
+    Opción deshabilitada
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="check2" checked>
+  <label class="form-check-label" for="check2">
+    Opción marcada
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id="check3" disabled>
+  <label class="form-check-label" for="check3">
+    Opción deshabilitada
+  </label>
+</div>
+
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="sexo" id="radio1">
+  <label class="form-check-label" for="radio1">
+    Masculino
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="sexo" id="radio2">
+  <label class="form-check-label" for="radio2">
+    Femenino
+  </label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheck1">
+  <label class="form-check-label" for="inlineCheck1">HTML</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheck2">
+  <label class="form-check-label" for="inlineCheck2">CSS</label>
+</div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" id="switch1">
+  <label class="form-check-label" for="switch1">
+    Activar notificaciones
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input is-invalid" type="checkbox" id="checkError">
+  <label class="form-check-label" for="checkError">
+    Opción obligatoria
+  </label>
+  <div class="invalid-feedback">
+    Debes seleccionar esta opción
+  </div>
+</div>
+
+<h4>formualrio</h4>
+<form>
+  <div class="row g-3">
+    
+    <!-- Nombre -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">Nombre</label>
+      <input type="text" class="form-control" placeholder="Nombre">
+    </div>
+
+    <!-- Apellido -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">Apellido</label>
+      <input type="text" class="form-control" placeholder="Apellido">
+    </div>
+
+    <!-- Email -->
+    <div class="col-12 col-lg-8">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+    </div>
+
+    <!-- Teléfono -->
+    <div class="col-12 col-lg-4">
+      <label class="form-label">Teléfono</label>
+      <input type="tel" class="form-control" placeholder="123 456 789">
+    </div>
+
+    <!-- País -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">País</label>
+      <select class="form-select">
+        <option>España</option>
+        <option>México</option>
+      </select>
+    </div>
+
+    <!-- Ciudad -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">Ciudad</label>
+      <input type="text" class="form-control" placeholder="Ciudad">
+    </div>
+
+    <!-- Checkbox -->
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="check">
+        <label class="form-check-label" for="check">
+          Acepto los términos y condiciones
+        </label>
+      </div>
+    </div>
+
+    <!-- Botón -->
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary w-100">
+        Enviar formulario
+      </button>
+    </div>
+
+  </div>
+</form>
+
+
+ <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
