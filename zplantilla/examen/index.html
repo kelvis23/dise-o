@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(26, 25, 25);
+      color: white;
+
+    }
+
+    .header-bg {
+      background-color: blue;
+      color: white;
+    }
+
+    .grid-container {
+      display: grid;
+      /* Activamos grid */
+      grid-template-rows: 150px 150px 150px;
+      /* 4 columnas iguales dinámicas */
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      /* 3 filas explícitas de 150px */
+      grid-gap: 10px;
+      /* Espacio entre celdas */
+
+      color: white;
+
+      /*dinamico  */
+      grid-auto-rows: 120px;
+      grid-gap: 10px;
+      margin-top: 50px;
+    }
+
+    /*     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+*/
+
+    .grid-container div {
+      display: flex;
+      justify-content: center;
+      /* Centrado horizontal del grid */
+      align-items: center;
+      /* Centrado vertical del grid */
+      border-radius: 5px;
+    }
+
+    #grid1 {
+      background-color: yellow;
+      color: black;
+      grid-column: 1/ span 2;
+    }
+
+    #grid2 {
+      background-color: green;
+      grid-column: 3/span 1;
+      grid-row: 1/span 2;
+    }
+
+    #grid3 {
+      background-color: blue;
+    }
+
+    #grid4 {
+      background-color: red;
+    }
+
+    #grid5 {
+      background-color: aqua;
+      color: black;
+    }
+
+    #grid6 {
+      background-color: gray;
+    }
+
+    #grid7 {
+      background-color: white;
+      color: black;
+
+    }
+
+    #grid8 {
+      background-color: rgb(26, 25, 25);
+      border: 1px solid white;
+
+    }
+
+
+    /* animacion*/
+    .caja {
+      position: relative;
+      background: lightcyan;
+      height: 150px;
+      width: 150px;
+      margin: 20px;
+
+
+      /*animation-direction: normal →  | reverse←  | alternate→ ← | alternate reverse ← → ;*/
+    }
+
+    .circle {
+      position: absolute;
+      animation-name: movimiente;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    @keyframes movimiente {
+      0% {
+        left: 0;
+        background: lightslategrey;
+      }
+
+      25% {
+        background: red;
+      }
+
+      50% {
+        background: lime;
+      }
+
+      75% {
+        background: orange;
+      }
+
+      100% {
+        left: 80%;
+        background: blue;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="box header-bg">
+          <header>
+            <h1>2da Eval-grid bootstrap y animecion</h1>
+            <a href="#" style="color: white;">Apartado A </a>
+            <a href="#" style="color: white;">Apartado B </a>
+            <a href="#" style="color: white;">Apartado C </a>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-warning">Apartado A css Grid</h2>
+      <p>panel de suptitulo"></data></p>
+      <div class="grid-container">
+        <div id="grid1"> esto es una carta de presentasion con un bototon
+          <br>
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid2"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid3"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid4"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid5"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid6"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid7"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+        <div id="grid8"> esto es una carta de presentasion con un bototon
+          <br>
+
+          <button type="submit">bototon</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row mb-3 card-group  ">
+      <h3> Apartad B</h3>
+      <div class="col-12 col-md-6 card border-primary bg-dark">
+        <form>
+          <div class="row mb-3">
+            <div class="col-12 col-md-6">
+              <label class="form-label text-warning ">usuario</label>
+              <input type="text" class="form-control" placeholder=" nombre del usuario">
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label text-warning ">email</label>
+              <input type="email" class="form-control" placeholder="correo@correo.com">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-md-6">
+              <label class="form-label text-warning ">Contraseña</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="col-12 col-md-6 mt-3 mt-md-0">
+              <label for="rol" class="form-label text-warning ">rol</label>
+              <select class="form-select" id="rol">
+                <option selected>Seleccione un rol</option>
+                <option value="1">maestro</option>
+                <option value="2">estudiante</option>
+                <option value="3">visitante</option>
+              </select>
+
+            </div>
+          </div>
+
+
+          <div class="col-12 ">
+            <label class="form-label text-warning">Mensaje</label>
+            <textarea class="form-control" rows="4"></textarea>
+          </div>
+
+
+          <div class="col-12 ">
+            <div class="row">
+              <div class="col-12 col-md-6 mt-3 mt-md-0">
+                <label class="form-label text-warning"> preferenia de notificasion </label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="estado" id="email" checked>
+                  <label class="form-check-label text-white" for="email">email</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="estado" id="push">
+                  <label class="form-check-label text-white" for="push">push</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switch1">
+            <label class="form-check-label" for="switch1">
+              quiere ressivir novedades del curso
+            </label>
+          </div>
+          <div class="form-check d-inline-block mb-3">
+            <input class="form-check-input" type="checkbox" id="terminos">
+            <label class="form-check-label text-white" for="terminos">
+              Acepto los terminos y pliticas de pivasidad
+            </label>
+          </div>
+
+          <button type="submit" class=" col-12 btn btn-primary ">crear cuenta</button>
+          <br>
+          <button type="submit" class=" col-12 btn btn-warning ">limpiar</button>
+
+
+        </form>
+      </div>
+      <br>
+      <div class="col-12 col-md-6 card border-success  bg-dark">
+        <form>
+          <div class="col-12 ">
+            <label class="form-label text-primary ">Nombre</label>
+            <input type="text" class="form-control" placeholder=" Tu Nombre  usuario">
+            </di>
+
+            <div class="col-12 ">
+              <label for="modulo" class="form-label text-primary ">modulo</label>
+              <select class="form-select" id="rol">
+                <option selected>Seleccione un modulo</option>
+                <option value="1">DAM</option>
+                <option value="2">DAW</option>
+                <option value="3">ASIR</option>
+              </select>
+            </div>
+
+            <div class="col-12  ">
+              <div class="row">
+                <div class="col-12 col-md-6 mt-3 mt-md-0">
+                  <label class="form-label text-primary"> nivel de dificultad </label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" id="bajo">
+                    <label class="form-check-label text-white" for="bajo">bajo</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" id="medio" checked>
+                    <label class="form-check-label text-white" for="medio">medio</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="estado" id="alto">
+                    <label class="form-check-label text-white" for="alto">alto</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="switch1">
+              <label class="form-check-label" for="switch1">
+                Enviar de forma anonima
+              </label>
+            </div>
+
+            <div class="col-12 ">
+              <label class="form-label text-primary">Comentario</label>
+              <textarea class="form-control" rows="4"></textarea>
+            </div>
+            <div class="form-check d-inline-block mb-3">
+              <input class="form-check-input" type="checkbox" id="terminos">
+              <label class="form-check-label text-white" for="terminos">
+                confirmar que lso datos son corectos
+              </label>
+            </div>
+
+
+            <button type="submit" class=" col-12 btn btn-success"> enviar encusta </button>
+            <br>
+            <button type="submit" class="col-12 btn btn-danger ">borrar respuesta</button>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <h4>Apartado c animacion</h4>
+    <div class="card bg-dark  border-white">
+      <div class="card-body">
+        <p class="card-text">circulo en linea cabia de color si el sistema reduce el moviento se retine.</p>
+        <div class="circle"> </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
