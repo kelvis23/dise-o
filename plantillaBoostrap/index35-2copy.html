@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background: pink;
+        }
+
+        .contenedor {
+            margin-bottom: 20px;
+            background: #0066ff;
+            color: #fff;
+            height: 100px;
+        }
+
+        .contenedor>div {
+            background: rgb(255, 255, 255, .2);
+            padding: 15px;
+            border: 1 solid #0065fd;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <h1>.flex-nowrap</h1>
+                <div class="contenedor d-flex flex-nowrap">
+
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                    <div>caja4</div>
+                    <div>caja5</div>
+                    <div>caja6</div>
+                    <div>caja7</div>
+                    <div>caja8</div>
+                    <div>caja9</div>
+                    <div>caja10</div>
+                </div>
+                <h1>.flex-wrap</h1>
+
+                <div class="contenedor d-flex flex-wrap">
+
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                    <div>caja4</div>
+                    <div>caja5</div>
+                    <div>caja6</div>
+                    <div>caja7</div>
+                    <div>caja8</div>
+                    <div>caja9</div>
+                    <div>caja10</div>
+                </div>
+                <div class="contenedor d-flex flex-wrap-reverse">
+
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                    <div>caja4</div>
+                    <div>caja5</div>
+                    <div>caja6</div>
+                    <div>caja7</div>
+                    <div>caja8</div>
+                    <div>caja9</div>
+                    <div>caja10</div>
+                </div>
+                <div class="contenedor d-flex flex-nowrap">
+                    <div class="order-2">caja1</div>
+                    <div class="order-3">caja2</div>
+                    <div class="order-1">caja3</div>
+                </div>
+                <div class="contenedor d-flex align-items-end">
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <h4>Align Content</h4>
+                <div class=" contenedor d-flex flex-wrap-reverse">
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                    <div>caja4</div>
+                    <div>caja5</div>
+                    <div>caja6</div>
+                    <div>caja7</div>
+                    <div>caja8</div>
+                    <div>caja9</div>
+                    <div>caja10</div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h4>margint auto</h4>
+                <hr>
+
+                <div class="contenedor d-flex justify-content-end">
+                    <div class="me-auto">caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                </div>
+                <div class="contenedor d-flex justify-content-start">
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div class="ms-auto">caja3</div>
+                </div>
+
+                <div class="contenedor d-flex flex-column justify-content-start" style="height: 250px;">
+                    <div class="mb-auto">caja1</div>
+                    <div>caja2</div>
+                    <div>caja3</div>
+                </div>
+                <div class="contenedor d-flex flex-column justify-content-end" style="height: 250px;">
+                    <div>caja1</div>
+                    <div>caja2</div>
+                    <div class="mt-auto">caja3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
