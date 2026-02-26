@@ -20,7 +20,6 @@
         <aside class="sidebar">
             <h1>sidebar aqui</h1>
         </aside>
-        <?get_sidebar(  );?>
-
+<?php get_sidebar(); ?>.
     </main>
 <?php get_footer( ); ?>
