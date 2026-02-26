@@ -1,0 +1,290 @@
+/*
+Theme Name: Temabase
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Desarrollador Nombre
+Author URI: https://wordpress.org/
+Description: Nuestra primera pagina y template en wordpress
+Version: 1.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mitema
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+:root{
+    /* Fuentes */
+    --fuentePrincipal : 'Montserrat', sans-serif;
+    --fuenteTexto : 'Open Sans', sans-serif;
+    --fuenteSecundatia : 'Roboto', sans-serif;
+
+        /* Colores */
+    --colorPrimario : #3A7563;
+    --grisOscuro : #392F2F;
+    --colorSecundario : #59A985;
+    --blancoOpaco : #E6D3A7;
+    --blackBlack : black;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--fuenteSecundatia);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--colorPrimario);
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/*  Paul Irish*/
+
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 4.8rem;
+}
+h3 {
+    font-size: 3.6rem;
+}
+h4 {
+    font-size: 2.4rem;
+}
+
+/* Estilos Globales */
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+
+/* Header */
+
+.site-header{
+    background-color: var(--grisOscuro);
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+/* menu Principal */
+.menu-principal {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .menu-principal {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }    
+    .menu-principal .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu-principal li {
+        margin-right: 2rem;
+    }
+    .menu-principal li:last-of-type {
+        margin-right: 0;
+    }
+}
+.menu-principal a {
+    font-family: var(--fuentePrincipal);
+    color: var(--blancoOpaco);
+    font-size: 2.2rem;
+    padding: .5rem 2rem;
+    display: block;
+
+}
+
+@media (min-width: 768px) {
+    .menu-principal a {
+        font-size: 2.6rem;
+        position: relative;
+        z-index: 1;
+    }
+    /* Animacion CSS para el menu con pseudo-elementos */
+    .menu-principal a::before,
+    .menu-principal ::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: var(--colorPrimario);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+    .menu-principal a::after {
+        top: 50%;
+        transform-origin: right;
+
+    }
+    .menu-principal a::before {
+        top: 0;
+        transform-origin: left;
+    }
+    .menu-principal a:hover::before {
+        transform: scaleX(1);
+    }
+    .menu-principal a:hover::after {
+        transform: scaleX(1);
+    }
+}
+/* Usamos las clases que usa WP y añadimos estilos */
+
+.menu-principal .current_page_item {
+    border-bottom: 3px solid var(--colorPrimario);
+}
+
+/* Estilos al menu slicknav */
+.slicknav_menu{
+    background-color: var(--grisOscuro);
+}
+@media (min-width: 768px) {
+    .slicknav_menu{
+        display: none;
+    }
+}
+.slicknav_btn {
+    background-color: var(--colorPrimario);
+    padding: 1.5rem;
+}
+.slicknav_nav a{
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+}
+.slicknav_nav a:hover{
+    background: transparent;
+    color: var(--colorSecundario);    
+}
+
+/** Estilos del Footer **/
+.contenido-footer{
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .contenido-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.site-footer .menu-principal {
+    display: block;
+}
+
+.site-footer a {
+    color: var(--blackBlack);
+    text-align: center;
+    font-size: 2.4rem;
+}
+.site-footer .menu-principal .current_page_item{
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .site-footer .menu-principal .current_page_item {
+        border-bottom: 3px solid var(--colorPrimario);
+    }
+    
+}
+
+.site-footer .menu-principal a::before,
+.site-footer .menu-principal ::after {
+    display: none;
+}
+
+.copyright {
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.8rem;
+    color: var(--colorSecundario);
+    margin: 2rem 0 0 0;
+}
+@media (min-width: 768px) {
+    .copyright {
+        font-size: 2.4rem;
+        margin: 0;
+    }
+    
+}
+
+
+/* Textos Contenido */
+
+.text-center {
+    text-align: center;
+
+} 
+.texto-primario{
+    color: var(--colorPrimario);
+}
+
+.seccion {
+    padding: 5rem 0;
+}
+
+/* Paginas */
+.imagen-destacada {
+    margin-bottom: 5rem;
+
+}
+.pagina h1 {
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .pagina.con-sidebar {
+        display: flex;
+        justify-content: space-between;   
+    }
+    .con-sidebar .contenido-principal {
+        flex: 0 0 calc(65% - 2rem);
+    }
+    .con-sidebar .sidebar {
+        flex: 0 0 calc(35% - 2rem);
+    }
+}
