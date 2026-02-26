@@ -1,1 +1,0 @@
-<h1>esto es el sidebar</h1>
