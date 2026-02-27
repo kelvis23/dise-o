@@ -17,7 +17,6 @@ Use it to make something cool, have fun, and share what youve learned with other
 
 /* header */
 header {
-    color: white;
     background-color: black;
 }
 
@@ -92,4 +91,22 @@ header {
 .menu-columna ul li.current-menu-item a {
     background-color: #ffc107;
     color: #000;
+}
+
+/* login*/
+.btn-login {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #e0a800;
+    color: #000;
+}
+body.page-template-login .container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
