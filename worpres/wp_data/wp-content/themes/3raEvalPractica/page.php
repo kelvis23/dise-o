@@ -15,15 +15,34 @@
         <nav id="sidebar" class=" p-3">
             <div class="d-flex">
                 <?php get_sidebar(); ?>
-                
+
             </div>
         </nav>
+        <div id ="contenido" class="container">
+            <h1 class ="text-center text-warning "><?php the_title(); ?></h1>
+            <div class="row">
 
-        <!-- Contenido principal -->
-        <div id="content" class="p-4">
-            <h1><?php the_title(); ?></h1>
-            <p>Este es el contenido principal de la página.</p>
+                <div class="col-md-4">
+                    <?php
+                    $args = array(
+                        'theme_location' => 'menu-principal',
+                        'container' => 'nav',
+                        'container_class' => 'menu-principal'
+                    );
+                    wp_nav_menu($args);
+                    ?>
+                </div>
+
+                <div class="col-md-8">
+                    <p>
+                        Aquí va tu contenido principal. Texto, imágenes, lo que necesites.
+                    </p>
+                </div>
+
+
+            </div>
         </div>
+
     </div>
     <?php get_footer(); ?>
 </body>

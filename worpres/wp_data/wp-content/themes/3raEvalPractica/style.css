@@ -54,5 +54,11 @@ header{
     min-height: 100vh;       
 }
 
+#contenido{
+    color: white;
+    background-color: black; 
+
+}
+
 
 
