@@ -15,50 +15,81 @@ Text Domain: twentytwenty
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what youve learned with others. */
 
-header{
- color: yellow;
-  background-color: black;
+/* header */
+header {
+    color: white;
+    background-color: black;
 }
 
 .menu-principal ul {
     list-style: none;
+    display: flex;
+    gap: 10px;
     margin: 0;
     padding: 0;
+}
 
-    display: flex;          
-    gap: 10px;              
+.menu-principal ul li a {
+    color: #ffc107;
+    text-decoration: none;
+    border: 2px solid #ffc107;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.menu-principal ul li a:hover {
+    background-color: #ffc107;
+    color: #000;
 }
 
 
-.menu-principal a {
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+
+/* sidebar y contenido */
+#sidebar {
+    background-color: black;
+    min-height: 100vh;
+}
+
+#contenido {
+    background-color: black;
+
+}
+.menu-columna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-columna ul li a {
+    display: block;
+    color: #ffc107; 
     text-decoration: none;
-    
-    padding: 8px 16px;
-    border: 2px solid yellow;
-    border-radius: 6px;
-
-    color: yellow;
-    font-weight: 600;
-
+    border: 1px solid #ffc107; 
+    padding: 8px 15px;
+    border-radius: 12px; 
+    font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease;
 }
 
 
-.menu-principal a:hover {
-    background-color: yellow;
-    color: white;
-}
-
-#sidebar {
-    background-color: black; 
-    min-height: 100vh;       
-}
-
-#contenido{
-    color: white;
-    background-color: black; 
-
+.menu-columna ul li a:hover {
+    background-color: #ffc107;
+    color: #000;
 }
 
 
-
+.menu-columna ul li.current-menu-item a {
+    background-color: #ffc107;
+    color: #000;
+}
