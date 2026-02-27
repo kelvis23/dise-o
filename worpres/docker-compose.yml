@@ -29,8 +29,7 @@ services:
     volumes:
     # el primero es porque en casa no funciona 
     #el segundo es para el istituto si hay algun problema de pediendo donde este elimina uno de los dos y deja el otro
-      - "C:/Users/kelvi/daw2/dise-o/worpres/wp_data/wp-content/themes:/var/www/html/wp-content/themes"
-      - "wp_data:/var/www/html "
+    - "/home/diurno/daw/diseño/worpres/wp_data/wp-content/themes:/var/www/html/wp-content/themes"
 volumes:
   db_data:
   wp_data:
