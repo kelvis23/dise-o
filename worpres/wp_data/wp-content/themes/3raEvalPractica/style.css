@@ -19,6 +19,10 @@ Use it to make something cool, have fun, and share what youve learned with other
 header {
     background-color: black;
 }
+body {
+    background-color: black; /* Fondo oscuro como la imagen 1 */
+    margin: 0;
+}
 
 .menu-principal ul {
     list-style: none;
@@ -110,43 +114,74 @@ body.page-template-login .container {
     display: flex;
     align-items: center;
 }
+
 /*galarias  */
+#galeria {
+    background-color: black;
+    margin: 20px;
+}
 .galeria-irregular {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
 
+.galeria-irregular .item-galeria:nth-child(1) { grid-column: 1; }
+.galeria-irregular .item-galeria:nth-child(2) { grid-column: 2; }
+
+.galeria-irregular .item-galeria:nth-child(3) { grid-column: 1; }
+.galeria-irregular .item-galeria:nth-child(4) { grid-column: 2; }
+.galeria-irregular .item-galeria:nth-child(5) { grid-column: 3; }
+
+.galeria-irregular .item-galeria:nth-child(6) { grid-column: 2; }
 
 .item-galeria {
-    position: relative;
-    border: 2px solid #ffc107; 
-    border-radius: 20px;
-    overflow: hidden;
+    background-color: #2c2b2b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; 
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 50px;
 }
 
 .item-galeria img {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s, filter 0.3s;
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.05);
+}
+
+.item-galeria:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.galeria-titulo {
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* productos */
+
+#producto{
+    background-color: black; 
+    padding: 20px;
+    margin: 20px;
 }
 
 
-.galeria-irregular .item-galeria:nth-child(1) { grid-column: 1 / span 3; }
-.galeria-irregular .item-galeria:nth-child(2) { grid-column: 4 / span 3; }
 
-.galeria-irregular .item-galeria:nth-child(3) { grid-column: 1 / span 2; }
-.galeria-irregular .item-galeria:nth-child(4) { grid-column: 3 / span 2; }
-.galeria-irregular .item-galeria:nth-child(5) { grid-column: 5 / span 2; }
 
-.galeria-irregular .item-galeria:nth-child(6) { grid-column: 2 / span 4; } 
 
-@media (max-width: 768px) {
-    .galeria-irregular {
-        grid-template-columns: 1fr;
-    }
-    .galeria-irregular .item-galeria {
-        grid-column: auto !important;
-    }
-}
+
+
+
+
+
