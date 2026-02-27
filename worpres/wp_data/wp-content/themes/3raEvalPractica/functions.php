@@ -68,5 +68,33 @@ function mitemplat_scripts_stayles() {
 
 add_action( 'wp_enqueue_scripts', 'mitemplat_scripts_stayles' );
 
+function galeria_imagenes_destacadas() {
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1 
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        echo '<div class="galeria-destacadas">';
+        while ($query->have_posts()) {
+            $query->the_post();
+            if (has_post_thumbnail()) {
+                $thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                echo '<div class="item-galeria">';
+                echo '<a href="' . get_permalink() . '">';
+                echo '<img src="' . esc_url($thumb_url) . '" alt="' . get_the_title() . '">';
+                echo '</a>';
+                echo '</div>';
+            }
+        }
+        echo '</div>';
+    }
+    wp_reset_postdata();
+}
+add_shortcode('galeria_destacadas', 'galeria_imagenes_destacadas');
+
+
 
   

@@ -47,7 +47,7 @@ Template Name: Login
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary rounded-3">
+                            <button type="submit" class="btn btn-warning rounded-3">
                                 Entrar
                             </button>
                         </div>
